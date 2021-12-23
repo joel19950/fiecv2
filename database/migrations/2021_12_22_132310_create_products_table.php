@@ -27,7 +27,7 @@ class CreateProductsTable extends Migration
             $table->string('product_image')->nullable();
 
             
-            $table->foreign("catalogue_id")->references('id')->on('catalogues')
+             $table->foreign("catalogue_id")->references('id')->on('catalogues')
             ->onDelete('cascade')->onUpdate('cascade');
             $table->foreign("category_id")->references('id')->on('categories')
             ->onDelete('cascade')->onUpdate('cascade');
