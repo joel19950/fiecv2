@@ -16,4 +16,8 @@ public function category()
     public function catalogue(){
         return $this->belongsTo(Catalogue::class);
     }
+    
+    public function shop(){
+        return $this->belongsTo(Shop::class);
+    }
 }

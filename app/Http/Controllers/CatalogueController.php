@@ -9,7 +9,7 @@ class CatalogueController extends Controller
     //retourner les catalogues
 public function list_catalogue(){
 $catalogues=Catalogue::paginate(3);
-return view('admin.catalogue.list_catalogue')->with('catalogues',$catalogues);
+return view('admin.catalogue.lis t_catalogue')->with('catalogues',$catalogues);
 }
 
 

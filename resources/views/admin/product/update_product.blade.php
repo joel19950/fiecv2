@@ -77,12 +77,6 @@
                                     </div>
                                 </div>
 
-
-
-
-
-
-
                                 <div class="form-group row">
                                     <div class="col-lg-3">
                                         <label class="col-form-label">Boutique</label>
