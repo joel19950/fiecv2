@@ -1,4 +1,4 @@
-@extends('client.layouts.clientlayouts')
+@extends('client.layouts.clientlayout')
 @section('content')
 <!--content-->
 <!---728x90--->

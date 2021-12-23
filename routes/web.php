@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('client.home');
-});
+
+Route::get('/', [ClientController::class, 'home']);
+Route::get('/aboutus', [ClientController::class, 'aboutus']);
+Route::get('/contact', [ClientController::class, 'contact']);
+Route::get('/products', [ClientController::class, 'products']);
+Route::get('/product_detail', [ClientController::class, 'product_detail']);
+Route::get('/search', [ClientController::class, 'search']);
+

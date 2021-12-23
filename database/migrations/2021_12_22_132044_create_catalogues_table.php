@@ -15,7 +15,10 @@ class CreateCataloguesTable extends Migration
     {
         Schema::create('catalogues', function (Blueprint $table) {
             $table->id();
+            $table->string('catalogue_name');
             $table->timestamps();
+
+            
         });
     }
 

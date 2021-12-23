@@ -35,14 +35,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <script src="{{asset('//m.servedby-buysellads.com/monetization.js')}}" type="text/javascript"></script>
-<script>
+{{-- <script>
 (function(){
 	if(typeof _bsa !== 'undefined' && _bsa) {
   		// format, zoneKey, segment:value, options
   		_bsa.init('flexbar', 'CKYI627U', 'placement:w3layoutscom');
   	}
 })();
-</script>
+</script> --}}
 <script>
 (function(){
 if(typeof _bsa !== 'undefined' && _bsa) {
@@ -277,7 +277,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 		 <div class="col-sm-8 h_menu4">
 				<ul class="memenu skyblue">
 					<li class=" grid"><a  href="{{URL::to('/')}}">Accueil</a></li>	
-				    <li><a  href="{{URL::to('/about')}}">A propos</a></li>
+				    <li><a  href="{{URL::to('/aboutus')}}">A propos</a></li>
 				    <li class="grid"><a  href="{{URL::to('/products')}}">Produits </a> </li>
 					<li><a class="color6" href="{{URL::to('/contact')}}">Conact</a></li>
 			  	</ul> 
@@ -349,16 +349,16 @@ RIGHT SIDEBAR TOGGLE SECTION
 				<div class="col-sm-3 footer-bottom-cate">
 					<h6>Categories</h6>
 					<ul>
-						<li><a href="#">Curabitur sapien</a></li>
-						<li><a href="#">Dignissim purus</a></li>
-						<li><a href="#">Tempus pretium</a></li>
-						<li><a href="#">Dignissim neque</a></li>
-						<li><a href="#">Ornared id aliquet</a></li>
+						<li><a href="#">Aliment</a></li>
+						<li><a href="#">Produits</a></li>
+						<li><a href="#">Santé</a></li>
+						<li><a href="#">Boutique</a></li>
+						<li><a href="#">Fruit</a></li>
 						
 					</ul>
 				</div>
 				<div class="col-sm-3 footer-bottom-cate">
-					<h6>Feature Projects</h6>
+					<h6>Contact info</h6>
 					<ul>
 						<li><a href="#">Curabitur sapien</a></li>
 						<li><a href="#">Dignissim purus</a></li>
@@ -369,20 +369,16 @@ RIGHT SIDEBAR TOGGLE SECTION
 					</ul>
 				</div>
 				<div class="col-sm-3 footer-bottom-cate">
-					<h6>Top Brands</h6>
+					<h6>Villes</h6>
 					<ul>
-						<li><a href="#">Curabitur sapien</a></li>
-						<li><a href="#">Dignissim purus</a></li>
-						<li><a href="#">Tempus pretium</a></li>
-						<li><a href="#">Dignissim neque</a></li>
-						<li><a href="#">Ornared id aliquet</a></li>
-						<li><a href="#">Ultrices id du</a></li>
-						<li><a href="#">Commodo sit</a></li>
+						<li><a href="#">Douala</a></li>
+						<li><a href="#">Yaoundé</a></li>
+						<li><a href="#">Bafoussam</a></li>
 						
 					</ul>
 				</div>
 				<div class="col-sm-3 footer-bottom-cate cate-bottom">
-					<h6>Our Address</h6>
+					<h6> Adresse</h6>
 					<ul>
 						<li>Aliquam metus  dui. </li>
 						<li>orci, ornareidquet</li>
@@ -393,7 +389,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 					</ul>
 				</div>
 				<div class="clearfix"> </div>
-				<p class="footer-class"> © 2021 Fashion Mania. All Rights Reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+				<p class="footer-class"> © 2021 promo24. All Rights Reserved | <a href="" target="_blank">jt</a> </p>
 			</div>
 	</div>
 </div>
