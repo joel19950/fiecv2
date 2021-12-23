@@ -110,6 +110,51 @@ public function desactiverproduct($id)
     }
 
 
+    public function update_product_save(Request $request)
+    {
+       
+
+
+        $this->validate(
+            $request,
+            [
+                'product_name' => 'required',
+                'product_description' => 'required',
+                'product_category' => 'required',
+                'product_price' => 'required',
+                'product_image' => 'required',
+                'product_image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5048'
+
+            ]
+        );
+
+
+        if ($request->hasFile('product_image')) {
+
+            foreach ($request->file('product_image') as $image) {
+                $name = $image->getClientOriginalName();
+                $image->move(public_path() . '/public_images/', $name);
+                $data[] = $name;
+            }
+        } else {
+            $data = '["noimage.jpg"]';
+        }
+        $product->product_name = $request->input('product_name');
+        $product->product_description = $request->input('product_description');
+        $product->product_price = $request->input('product_price');
+        $product->product_category = $request->input('product_category');
+        $product->product_catalogue= $request->input('product_catalogue');
+        $product->product_city = $request->input('product_city');
+        $product->product_status = $request->input('product_status');
+        $product->product_image = json_encode($data);
+        $product->product_status = 1;
+
+        $product->update();
+        Toastr::success("Le product a été modifier avec succès :)", 'success');
+        return redirect('/list_product');
+    }
+
+
 
 
 
