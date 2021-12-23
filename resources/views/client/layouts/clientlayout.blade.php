@@ -255,7 +255,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 			<div class="col-sm-4 header-left">		
 					<p class="log"><a href="account.html">FR</a>
 						<span>ou</span><a  href="account.html">AN</a></p>
-					<div class="cart box_1">
+					{{-- <div class="cart box_1">
 						<a href="checkout.html">
 						<h3> <div class="total">
 							<span class="simpleCart_total"></span></div>
@@ -263,7 +263,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 						</a>
 						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
 
-					</div>
+					</div> --}}
 					<div class="clearfix"> </div>
 			</div>
 				<div class="clearfix"> </div>
