@@ -22,7 +22,7 @@ class CreateShopsTable extends Migration
             $table->timestamps();
 
             $table->foreign("city_id")->references('id')->on('cities')
-             ->onDelete('cascade')->onUpdate('cascade');
+                           ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
