@@ -22,8 +22,8 @@
         </div>	
     <div class="col-md-7 single-top-in">
                             <div class="single-para simpleCart_shelfItem">
-                                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h1>
-                                <p>Contrary to popular belf, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                                <h1>{{ $product->product_name }}</h1>
+                                <p>{{$product->product_description }}</p>
                                 <div class="star-on">
                                     <ul>
                                         <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
@@ -33,31 +33,17 @@
                                         <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
                                     </ul>
                                     <div class="review">
-                                        <a href="#"> 3 reviews </a>/
-                                        <a href="#">  Write a review</a>
+                                        <a href="#"> 3 examens </a>/
+                                        <a href="#">  Écrire un commentaire</a>
                                     </div>
                                 <div class="clearfix"> </div>
                                 </div>
                                 
-                                    <label  class="add-to item_price">$32.8</label>
+                                    <label  class="add-to item_price">{{$product->product_price}} Fcfa</label>
                                 
                                 <div class="available">
-                                    <h6>Available Options :</h6>
-                                    <ul>
-                                        
-                                    <li>Size:<select>
-                                        <option>Large</option>
-                                        <option>Medium</option>
-                                        <option>small</option>
-                                        <option>Large</option>
-                                        <option>small</option>
-                                    </select></li>
-                                    <li>Cost:
-                                            <select>
-                                            <option>U.S.Dollar</option>
-                                            <option>Euro</option>
-                                        </select></li>
-                                </ul>
+                                    <h6> Disponible </h6>
+                                   
                             </div>
                                     <a href="#" class="cart item_add">More details</a>
                             </div>
@@ -74,7 +60,7 @@
                             </a>
                             <h3><a href="{{url('/detail_product/'.$prod->id)}}">{{$prod->product_name}}</a></h3>
                             <div class="price">
-                                    <h5 class="item_price">{{$prod->product_price}}</h5>
+                                    <h5 class="item_price">{{$prod->product_price}} Fcfa</h5>
                                     <a href="{{url('/detail_product/'.$prod->id)}}" class="item_add">Voir</a>
                                     <div class="clearfix"> </div>
                             </div>
@@ -138,7 +124,7 @@
                             </div>
                             <div class=" fashion-grid1">
                                 <h6 class="best2"><a href="single.html" >{{$prod->product_name }} </a></h6>
-                                <span class=" price-in1"> {{$prod->product_price}}</span>
+                                <span class=" price-in1"> {{$prod->product_price}} Fcfa</span>
                             </div>	
                             <div class="clearfix"> </div>
                         </div>
