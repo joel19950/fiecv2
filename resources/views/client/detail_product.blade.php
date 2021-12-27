@@ -120,10 +120,11 @@
                            
                         <div class="product-go">
                             <div class=" fashion-grid">
-                                <a href="single.html"><img class="img-responsive " src="/public_images/{{json_decode($prod->product_image)['0']}}" alt=""></a>	
+                                <a href="{{url('/detail_product/'.$prod->id)}}">
+                                    <img class="img-responsive " src="/public_images/{{json_decode($prod->product_image)['0']}}" alt=""></a>	
                             </div>
                             <div class=" fashion-grid1">
-                                <h6 class="best2"><a href="single.html" >{{$prod->product_name }} </a></h6>
+                                <h6 class="best2"><a href="{{url('/detail_product/'.$prod->id)}}" >{{$prod->product_name }} </a></h6>
                                 <span class=" price-in1"> {{$prod->product_price}} Fcfa</span>
                             </div>	
                             <div class="clearfix"> </div>

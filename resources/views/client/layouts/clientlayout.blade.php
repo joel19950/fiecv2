@@ -43,7 +43,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   	}
 })();
 </script> --}}
-<script>
+{{-- <script>
 (function(){
 if(typeof _bsa !== 'undefined' && _bsa) {
 	// format, zoneKey, segment:value, options
@@ -77,7 +77,7 @@ if(typeof _bsa !== 'undefined' && _bsa) {
      ga('require', 'urlChangeTracker');
      ga('send', 'pageview');
    </script>
-<script async src='/js/autotrack.js'></script>
+<script async src='/js/autotrack.js'></script> --}}
 
 <meta name="robots" content="noindex">
 <body><link rel="stylesheet" href="{{asset('//assests/css/font-awesome.min.css')}}">
