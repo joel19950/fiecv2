@@ -143,7 +143,7 @@
                             <div class="clearfix"> </div>
                         </div>
                         @empty
-                               <div> Aucun autre produits</div>
+                               <div> Aucun  produits</div>
                            @endforelse
                         
 
