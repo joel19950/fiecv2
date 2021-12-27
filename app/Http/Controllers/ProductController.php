@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Brian2694\Toastr\Facades\Toastr;
 use App\Models\Product;
+use App\Models\Category;
 class ProductController extends Controller
 {
     //
@@ -161,7 +162,10 @@ public function add_product(){
 
 public function detail_product($id){
     $product=Product::find($id);
-    return view('client.detail_product')->with('product', $product);
+    $prods=Product::where('category_id', $product->category_id)->limit(3)->get();
+    $cates=Category::orderBy('id','DESC')->limit(5)->get();
+    return view('client.detail_product')
+    ->with('product', $product)->with('prods', $prods)->with('cates', $cates);
 }
 
 }

@@ -67,7 +67,7 @@
                                                         <label class="col-form-label">Nom:</label>
                                                     </div>
                                                     <div class="col-lg-8">
-                                                        <input class="form-control" maxlength="25" type="text"
+                                                        <input class="form-control" type="text"
                                                             name="shop_name" required>
                                                     </div>
                                                 </div>
@@ -78,7 +78,7 @@
                                                         <label class="col-form-label">Description:</label>
                                                     </div>
                                                     <div class="col-lg-8">
-                                                        <input class="form-control" maxlength="25" type="text"
+                                                        <input class="form-control" type="text"
                                                             name="shop_description" required>
                                                     </div>
                                                 </div>

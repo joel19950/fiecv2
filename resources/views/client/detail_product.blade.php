@@ -6,16 +6,18 @@
     <div class="col-md-9">
         <div class="col-md-5 grid">		
             <div class="flexslider">
+
                   <ul class="slides">
 
                     @foreach(json_decode($product->product_image) as $image)
-                    <a href=""><img src=""></a>
-                    <li data-thumb="/public_images/{{$image ?? 'noimage.jpg'}}">
-                        <div class="thumb-image"> <img src="/public_images/{{$image ?? 'noimage.jpg'}}" data-imagezoom="true" class="img-responsive"> </div>
+                    
+                    <li data-thumb=" {{asset('/public_images/'.$image ?? '/public_images/ noimage.jpg' )}}">
+                        <div class="thumb-image"> <img src=" {{asset('/public_images/'.$image ?? '/public_images/ noimage.jpg' )}}" data-imagezoom="true" class="img-responsive"> </div>
                     </li>
 
                     @endforeach	
-                  </ul>
+                  </ul> 
+
             </div>
         </div>	
     <div class="col-md-7 single-top-in">
@@ -63,47 +65,26 @@
                 <div class="clearfix"> </div>
                 <!---728x90--->		
                 <div class="content-top1">
+                    	
+                	@forelse ($prods as $prod)
                     <div class="col-md-4 col-md3">
                         <div class="col-md1 simpleCart_shelfItem">
-                            <a href="single.html">
-                                <img class="img-responsive" src="{{asset('images/pi6.png')}}" alt="" />
+                            <a href="{{url('/detail_product/'.$prod->id)}}">
+                                <img class="img-responsive" src="/public_images/{{json_decode($prod->product_image)['0']}}" alt="" />
                             </a>
-                            <h3><a href="single.html">Jeans</a></h3>
+                            <h3><a href="{{url('/detail_product/'.$prod->id)}}">{{$prod->product_name}}</a></h3>
                             <div class="price">
-                                    <h5 class="item_price">$300</h5>
-                                    <a href="#" class="item_add">Add To Cart</a>
-                                    <div class="clearfix"> </div>
-                            </div>
-                        </div>
-                    </div>	
-                <div class="col-md-4 col-md3">
-                        <div class="col-md1 simpleCart_shelfItem">
-                            <a href="single.html">
-                                <img class="img-responsive" src="{{asset('images/pi7.png')}}" alt="" />
-                            </a>
-                            <h3><a href="single.html">Tops</a></h3>
-                            <div class="price">
-                                    <h5 class="item_price">$300</h5>
-                                    <a href="#" class="item_add">Add To Cart</a>
+                                    <h5 class="item_price">{{$prod->product_price}}</h5>
+                                    <a href="{{url('/detail_product/'.$prod->id)}}" class="item_add">Voir</a>
                                     <div class="clearfix"> </div>
                             </div>
                             
                         </div>
-                    </div>	
-                <div class="col-md-4 col-md3">
-                        <div class="col-md1 simpleCart_shelfItem">
-                            <a href="single.html">
-                                <img class="img-responsive" src="{{asset('images/pi.png')}}" alt="" />
-                            </a>
-                            <h3><a href="single.html">Tops</a></h3>
-                            <div class="price">
-                                    <h5 class="item_price">$300</h5>
-                                    <a href="#" class="item_add">Add To Cart</a>
-                                    <div class="clearfix"> </div>
-                            </div>
-                            
-                        </div>
-                    </div>	
+                 </div>  
+                    @empty
+                        Aucun autre produit appartient a cette catégories
+                    @endforelse
+               	
                 
                 <div class="clearfix"> </div>
                 </div>		
@@ -112,45 +93,15 @@
     <div class="col-md-3 product-bottom">
                 <!--categories-->
                     <div class=" rsidebar span_1_of_left">
-                            <h3 class="cate">Categories</h3>
+                            <h3 class="cate">Catégories</h3>
                                  <ul class="menu-drop">
-                                <li class="item1"><a href="#">Men </a>
-                                    <ul class="cute">
-                                        <li class="subitem1"><a href="single.html">Cute Kittens </a></li>
-                                        <li class="subitem2"><a href="single.html">Strange Stuff </a></li>
-                                        <li class="subitem3"><a href="single.html">Automatic Fails </a></li>
-                                    </ul>
-                                </li>
-                                <li class="item2"><a href="#">Women </a>
-                                    <ul class="cute">
-                                        <li class="subitem1"><a href="single.html">Cute Kittens </a></li>
-                                        <li class="subitem2"><a href="single.html">Strange Stuff </a></li>
-                                        <li class="subitem3"><a href="single.html">Automatic Fails </a></li>
-                                    </ul>
-                                </li>
-                                <li class="item3"><a href="#">Kids</a>
-                                    <ul class="cute">
-                                        <li class="subitem1"><a href="single.html">Cute Kittens </a></li>
-                                        <li class="subitem2"><a href="single.html">Strange Stuff </a></li>
-                                        <li class="subitem3"><a href="single.html">Automatic Fails</a></li>
-                                    </ul>
-                                </li>
-                                <li class="item4"><a href="#">Accesories</a>
-                                    <ul class="cute">
-                                        <li class="subitem1"><a href="single.html">Cute Kittens </a></li>
-                                        <li class="subitem2"><a href="single.html">Strange Stuff </a></li>
-                                        <li class="subitem3"><a href="single.html">Automatic Fails</a></li>
-                                    </ul>
-                                </li>
-                                        
-                                <li class="item4"><a href="#">Shoes</a>
-                                    <ul class="cute">
-                                        <li class="subitem1"><a href="single.html">Cute Kittens </a></li>
-                                        <li class="subitem2"><a href="single.html">Strange Stuff </a></li>
-                                        <li class="subitem3"><a href="single.html">Automatic Fails </a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                                @forelse ($cates as $cat)
+                                <li class="item4"><a href="#">{{$cat->category_name}}</a></li>
+                                @empty
+                                    Aucune Catégories lié
+                                @endforelse
+                                   
+                                </ul>
                         </div>
                     <!--initiate accordion-->
                             <script type="text/javascript">
@@ -175,71 +126,32 @@
     <!--//menu-->
     <!--seller-->
                     <div class="product-bottom">
-                            <h3 class="cate">Best Sellers</h3>
+                            <h3 class="cate">Autre produits</h3>
+                        
+                        
+                       	@forelse ($prods as $prod)
+                               
+                           
                         <div class="product-go">
                             <div class=" fashion-grid">
-                                <a href="single.html"><img class="img-responsive " src="{{asset('images/pr.jpg')}}" alt=""></a>	
+                                <a href="single.html"><img class="img-responsive " src="/public_images/{{json_decode($prod->product_image)['0']}}" alt=""></a>	
                             </div>
                             <div class=" fashion-grid1">
-                                <h6 class="best2"><a href="single.html" >Lorem ipsum dolor sitamet consectetuer  </a></h6>
-                                <span class=" price-in1"> $40.00</span>
+                                <h6 class="best2"><a href="single.html" >{{$prod->product_name }} </a></h6>
+                                <span class=" price-in1"> {{$prod->product_price}}</span>
                             </div>	
                             <div class="clearfix"> </div>
                         </div>
-                        <div class="product-go">
-                            <div class=" fashion-grid">
-                                <a href="single.html"><img class="img-responsive " src="{{asset('images/pr1.jpg')}}" alt=""></a>	
-                            </div>
-                            <div class=" fashion-grid1">
-                                <h6 class="best2"><a href="single.html" >Lorem ipsum dolor sitamet consectetuer  </a></h6>
-                                <span class=" price-in1"> $40.00</span>
-                            </div>	
-                            <div class="clearfix"> </div>
-                        </div>
-                        <div class="product-go">
-                            <div class=" fashion-grid">
-                                <a href="single.html"><img class="img-responsive " src="{{asset('images/pr2.jpg')}}" alt=""></a>	
-                            </div>
-                            <div class=" fashion-grid1">
-                                <h6 class="best2"><a href="single.html" >Lorem ipsum dolor sitamet consectetuer  </a></h6>
-                                <span class=" price-in1"> $40.00</span>
-                            </div>	
-                            <div class="clearfix"> </div>
-                        </div>	
-                        <div class="product-go">
-                            <div class=" fashion-grid">
-                                <a href="single.html"><img class="img-responsive " src="{{asset('images/pr3.jpg')}}" alt=""></a>	
-                            </div>
-                            <div class=" fashion-grid1">
-                                <h6 class="best2"><a href="single.html" >Lorem ipsum dolor sitamet consectetuer  </a></h6>
-                                <span class=" price-in1"> $40.00</span>
-                            </div>	
-                            <div class="clearfix"> </div>
-                        </div>		
+                        @empty
+                               <div> Aucun autre produits</div>
+                           @endforelse
+                        
+
                     </div>
     
     <!--//seller-->
     <!--tag-->
-                    <div class="tag">	
-                            <h3 class="cate">Tags</h3>
-                        <div class="tags">
-                            <ul>
-                                <li><a href="#">design</a></li>
-                                <li><a href="#">fashion</a></li>
-                                <li><a href="#">lorem</a></li>
-                                <li><a href="#">dress</a></li>
-                                <li><a href="#">fashion</a></li>
-                                <li><a href="#">dress</a></li>
-                                <li><a href="#">design</a></li>
-                                <li><a href="#">dress</a></li>
-                                <li><a href="#">design</a></li>
-                                <li><a href="#">fashion</a></li>
-                                <li><a href="#">lorem</a></li>
-                                <li><a href="#">dress</a></li>
-                            <div class="clearfix"> </div>
-                            </ul>
-                    </div>					
-                </div>
+                    
             </div>
             <div class="clearfix"> </div>
         </div>
