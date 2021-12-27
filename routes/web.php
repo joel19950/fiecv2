@@ -50,7 +50,7 @@ Route::post('/add_product_save',[ProductController::class, 'add_product_save']);
 Route::get('/delete_product/{id}',[ProductController::class, 'delete_product']);
 Route::get('/desactiverproduct/{id}',[ProductController::class, 'desactiverproduct']);
 Route::get('/activerproduct/{id}',[ProductController::class, 'activerproduct']);
-
+Route::get('/search', [ProductController::class, 'search_product']);
 
 
 //shops

@@ -192,12 +192,13 @@ RIGHT SIDEBAR TOGGLE SECTION
 		<div class="container">
 	
 				<div class="col-sm-4 logo">
-					<a href="index.html"><img src="{{asset('images/logo.jpg')}}" alt="" height="100px" width="75px"></a>	
+					<a href="{{URL::to('/')}}"><img src="{{asset('images/logo.jpg')}}" alt="" height="100px" width="75px"></a>	
 				</div>
 		
-			<div class="col-sm-4 header-left">		
-					<p class="log"><a href="account.html">FR</a>
-						<span>ou</span><a  href="account.html">AN</a></p>
+			<div class="col-sm-4 header-left">	
+				 	
+					<p class="log"><a href="account.html"> <img src="{{asset('images/france.png')}}" height="12px" width="18px"></a>
+						<span>ou</span><a  href="account.html"> <img src="{{asset('images/anglais.jpg')}}" height="12px" width="18px"> </a></p>
 			
 					<div class="clearfix"> </div>
 			</div>
@@ -229,13 +230,18 @@ RIGHT SIDEBAR TOGGLE SECTION
 				<div id="small-dialog" class="mfp-hide">
 				<div class="search-top">
 						<div class="login">
-							<input type="submit" value="">
-							<input type="text" value="Rechercher..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">		
+							<form action="{{url('/search')}}" method="get">
+								@csrf
+								{{-- <input type="submit" value=""> --}}
+								<input type="text" name="search" value="Rechercher..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">		
+							 	<p>	<button type="submit" class="btn btn-success">recherche </button></p>
+							</form>
 						</div>
-						<p>	Recherche</p>
+						
 					</div>				
 				</div>
-				 <script>
+				
+				<script>
 						$(document).ready(function() {
 						$('.popup-with-zoom-anim').magnificPopup({
 							type: 'inline',

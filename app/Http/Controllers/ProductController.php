@@ -168,4 +168,22 @@ public function detail_product($id){
     ->with('product', $product)->with('prods', $prods)->with('cates', $cates);
 }
 
+
+
+public function search_product(Request $request)
+{
+    
+    $search = $request->get('search');
+    //dd($search);
+    
+    $prods = Product::where('product_name', 'like', '%' . $search . '%')
+          ->orWhere('product_description', 'like', '%' . $search . '%')
+          ->orWhere('product_price', 'like', '%' . $search . '%')
+          ->orWhere('product_city', 'like', '%' . $search . '%')
+          ->orderBy('id', 'DESC')->get();
+
+    return  view('client.search')->with('prods', $prods);
+}
+
+
 }
