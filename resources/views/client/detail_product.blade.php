@@ -21,7 +21,7 @@
     <div class="col-md-7 single-top-in">
                             <div class="single-para simpleCart_shelfItem">
                                 <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h1>
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                                <p>Contrary to popular belf, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
                                 <div class="star-on">
                                     <ul>
                                         <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
