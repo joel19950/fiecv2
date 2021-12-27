@@ -65,7 +65,7 @@
                                 <h3><a href="{{ url('/detail_product/' . $product->id) }}">{{ $product->product_name }}</a>
                                 </h3>
                                 <div class="price">
-                                    <h5 class="item_price">{{ $product->product_price }} FCFA</h5>
+                                    <h5 class="item_price">{{ $product->product_price }} Fcfa</h5>
                                     <a href="{{ url('/detail_product/' . $product->id) }}" class="item_add">Voir</a>
                                     <div class="clearfix"> </div>
                                 </div>
@@ -77,21 +77,7 @@
                             <div style="text-align: center">Aucun produit </div>
                         </div>
                     @endforelse
-
-                    {{-- <div class="col-md-3 col-md2">
-					<div class="col-md1 simpleCart_shelfItem">
-						<a href="single.html">
-							<img class="img-responsive" src="{{asset('images/pi5.png')}}" alt="" />
-						</a>
-						<h3><a href="single.html">T-Shirt</a></h3>
-						<div class="price">
-								<h5 class="item_price">$300</h5>
-								<a href="#" class="item_add">Add To Cart</a>
-								<div class="clearfix"> </div>
-						</div>
-						
-					</div>
-				</div> --}}
+                    
                     <div class="clearfix"> </div>
                 </div>
             </div>

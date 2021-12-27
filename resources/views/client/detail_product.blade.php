@@ -52,7 +52,7 @@
                         <a href="#"  style="font-size: 25px"> <i class="ti ti-linkedin"> </i></a>
                         <a href="#" style="font-size: 25px" > <i class="ti ti-youtube"> </i></a>
                         <a href="#"  style="font-size: 25px">  <i class="ti-twitter"> </i></a>
-                        {{-- <a href="#" class="cart item_add">details</a> --}}
+                        
                     </div>
                 </div>
                 <div class="clearfix"> </div>

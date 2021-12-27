@@ -37,50 +37,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <script src="{{asset('//m.servedby-buysellads.com/monetization.js')}}" type="text/javascript"></script>
-{{-- <script>
-(function(){
-	if(typeof _bsa !== 'undefined' && _bsa) {
-  		// format, zoneKey, segment:value, options
-  		_bsa.init('flexbar', 'CKYI627U', 'placement:w3layoutscom');
-  	}
-})();
-</script> --}}
-{{-- <script>
-(function(){
-if(typeof _bsa !== 'undefined' && _bsa) {
-	// format, zoneKey, segment:value, options
-	_bsa.init('fancybar', 'CKYDL2JN', 'placement:demo');
-}
-})();
-</script>
-<script>
-(function(){
-	if(typeof _bsa !== 'undefined' && _bsa) {
-  		// format, zoneKey, segment:value, options
-  		_bsa.init('stickybox', 'CKYI653J', 'placement:w3layoutscom');
-  	}
-})();
-</script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src='https://www.googletagmanager.com/gtag/js?id=UA-149859901-1'></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-149859901-1');
-</script>
-
-<script>
-     window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-     ga('create', 'UA-149859901-1', 'demo.w3layouts.com');
-     ga('require', 'eventTracker');
-     ga('require', 'outboundLinkTracker');
-     ga('require', 'urlChangeTracker');
-     ga('send', 'pageview');
-   </script>
-<script async src='/js/autotrack.js'></script> --}}
-
 <meta name="robots" content="noindex">
 <body><link rel="stylesheet" href="{{asset('//assests/css/font-awesome.min.css')}}">
 <!-- New toolbar-->
@@ -234,22 +190,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 <div class="header">
 	<div class="header-top">
 		<div class="container">
-		{{-- <div class="col-sm-4 world">
-					<ul >
-						<li>
-						<select class="in-drop">
-							  <option>English</option>
-							  <option>Japanese</option>
-							  <option>French</option>
-							</select></li>
-						<li><select class="in-drop1">
-							  <option>Dollar</option>
-							  <option>Euro</option>
-							  <option>Yen</option>
-							</select>
-						</li>
-					</ul>
-				</div> --}}
+	
 				<div class="col-sm-4 logo">
 					<a href="index.html"><img src="{{asset('images/logo.jpg')}}" alt="" height="100px" width="75px"></a>	
 				</div>
@@ -257,15 +198,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 			<div class="col-sm-4 header-left">		
 					<p class="log"><a href="account.html">FR</a>
 						<span>ou</span><a  href="account.html">AN</a></p>
-					{{-- <div class="cart box_1">
-						<a href="checkout.html">
-						<h3> <div class="total">
-							<span class="simpleCart_total"></span></div>
-							<img src="{{asset('images/cart.png')}}" alt=""/></h3>
-						</a>
-						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-
-					</div> --}}
+			
 					<div class="clearfix"> </div>
 			</div>
 				<div class="clearfix"> </div>
@@ -274,7 +207,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 		<div class="container">
 			<div class="head-top">
 				<div class="col-sm-2 number">
-					<span><i class="glyphicon glyphicon-phone"></i> 685 596 234</span>
+					<span><i class="glyphicon glyphicon-phone"></i> 676 471 717</span>
 				</div>
 		 <div class="col-sm-8 h_menu4">
 				<ul class="memenu skyblue">
@@ -420,15 +353,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 
 
 
-{{-- <script src="{{asset('js/jquery.min.js')}}"></script>
-<script src="{{asset('js/imagezoom.js')}}"></script>
-<!-- start menu -->
-<link href="{{asset('css/memenu.css')}}" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="{{asset('js/memenu.js')}}"></script>
- <script>$(document).ready(function(){$(".memenu").memenu();});</script> 
 
-<script src="{{asset('js/simpleCart.min.js')}}"> </script>
-<!--initiate accordion--> --}}
 						<script type="text/javascript">
 							$(function() {
 							    var menu_ul = $('.menu-drop > li > ul'),
