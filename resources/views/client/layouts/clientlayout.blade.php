@@ -331,7 +331,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 					</ul>
 				</div>
 				<div class="clearfix"> </div>
-				<p class="footer-class"> © 2021 promo24. All Rights Reserved | <a href="" target="_blank">jt</a> </p>
+				<p class="footer-class"> © 2021 promo24. All Rights Reserved | <a href="https://www.linkedin.com/in/jo%C3%ABl-tchoufa-143334183" target="_blank">jnt</a> </p>
 			</div>
 	</div>
 </div>
