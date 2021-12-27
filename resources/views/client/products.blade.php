@@ -5,186 +5,46 @@
 
     <div class="products">
         <div class="container">
-            <h1>Products</h1>
+            <h1>Produits</h1>
             <div class="col-md-9">
                 <div class="content-top1">
-                    <div class="col-md-4 col-md3">
-                        <div class="col-md1 simpleCart_shelfItem">
-                            <a href="single.html">
-                                <img class="img-responsive" src="images/pi.png" alt="" />
-                            </a>
-                            <h3><a href="single.html">Tops</a></h3>
-                            <div class="price">
-                                <h5 class="item_price">$300</h5>
-                                <a href="#" class="item_add">Add To Cart</a>
-                                <div class="clearfix"> </div>
-                            </div>
+                   
+                  @forelse ($products as $product)
+                   <div class="col-md-4 col-md3">
+                    <div class="col-md1 simpleCart_shelfItem">
+                        <a href="{{ url('/detail_product/' . $product->id) }}">
+                            <img class="img-responsive"  src="/public_images/{{ json_decode($product->product_image)['0'] }}" alt="" />
+                        </a>
+                        <h3><a href="{{ url('/detail_product/' . $product->id) }}">{{$product->product_name}}</a></h3>
+                        <div class="price">
+                            <h5 class="item_price">{{$product->product_price}}</h5>
+                            <a  href="{{ url('/detail_product/' . $product->id) }}" class="item_add">Voir</a>
+                            <div class="clearfix"> </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-md3">
-                        <div class="col-md1 simpleCart_shelfItem">
-                            <a href="single.html">
-                                <img class="img-responsive" src="images/pi2.png" alt="" />
-                            </a>
-                            <h3><a href="single.html">T-Shirt</a></h3>
-                            <div class="price">
-                                <h5 class="item_price">$300</h5>
-                                <a href="#" class="item_add">Add To Cart</a>
-                                <div class="clearfix"> </div>
-                            </div>
 
-                        </div>
                     </div>
-                    <div class="col-md-4 col-md3">
-                        <div class="col-md1 simpleCart_shelfItem">
-                            <a href="single.html">
-                                <img class="img-responsive" src="images/pi4.png" alt="" />
-                            </a>
-                            <h3><a href="single.html">Shirt</a></h3>
-                            <div class="price">
-                                <h5 class="item_price">$300</h5>
-                                <a href="#" class="item_add">Add To Cart</a>
-                                <div class="clearfix"> </div>
-                            </div>
-
-                        </div>
-                    </div>
+                </div>
+                  @empty
+                      <div style="text-align: center">Aucun produit</div>
+                  @endforelse
+                   
 
                     <div class="clearfix"> </div>
                 </div>
-                <!---728x90--->
-                <div class="content-top1">
-                    <div class="col-md-4 col-md3">
-                        <div class="col-md1 simpleCart_shelfItem">
-                            <a href="single.html">
-                                <img class="img-responsive" src="images/pi1.png" alt="" />
-                            </a>
-                            <h3><a href="single.html">Tops</a></h3>
-                            <div class="price">
-                                <h5 class="item_price">$300</h5>
-                                <a href="#" class="item_add">Add To Cart</a>
-                                <div class="clearfix"> </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-md3">
-                        <div class="col-md1 simpleCart_shelfItem">
-                            <a href="single.html">
-                                <img class="img-responsive" src="images/pi3.png" alt="" />
-                            </a>
-                            <h3><a href="single.html">T-Shirt</a></h3>
-                            <div class="price">
-                                <h5 class="item_price">$300</h5>
-                                <a href="#" class="item_add">Add To Cart</a>
-                                <div class="clearfix"> </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-md3">
-                        <div class="col-md1 simpleCart_shelfItem">
-                            <a href="single.html">
-                                <img class="img-responsive" src="images/pi5.png" alt="" />
-                            </a>
-                            <h3><a href="single.html">T-Shirt</a></h3>
-                            <div class="price">
-                                <h5 class="item_price">$300</h5>
-                                <a href="#" class="item_add">Add To Cart</a>
-                                <div class="clearfix"> </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="content-top1">
-                    <div class="col-md-4 col-md3">
-                        <div class="col-md1 simpleCart_shelfItem">
-                            <a href="single.html">
-                                <img class="img-responsive" src="images/pi6.png" alt="" />
-                            </a>
-                            <h3><a href="single.html">Jeans</a></h3>
-                            <div class="price">
-                                <h5 class="item_price">$300</h5>
-                                <a href="#" class="item_add">Add To Cart</a>
-                                <div class="clearfix"> </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-md3">
-                        <div class="col-md1 simpleCart_shelfItem">
-                            <a href="single.html">
-                                <img class="img-responsive" src="images/pi7.png" alt="" />
-                            </a>
-                            <h3><a href="single.html">Tops</a></h3>
-                            <div class="price">
-                                <h5 class="item_price">$300</h5>
-                                <a href="#" class="item_add">Add To Cart</a>
-                                <div class="clearfix"> </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-md3">
-                        <div class="col-md1 simpleCart_shelfItem">
-                            <a href="single.html">
-                                <img class="img-responsive" src="images/pi.png" alt="" />
-                            </a>
-                            <h3><a href="single.html">Tops</a></h3>
-                            <div class="price">
-                                <h5 class="item_price">$300</h5>
-                                <a href="#" class="item_add">Add To Cart</a>
-                                <div class="clearfix"> </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="clearfix"> </div>
-                </div>
+                
             </div>
             <div class="col-md-3 product-bottom">
                 <!--categories-->
                 <div class=" rsidebar span_1_of_left">
-                    <h3 class="cate">Categories</h3>
+                    <h3 class="cate">Catégories</h3>
                     <ul class="menu-drop">
-                        <li class="item1"><a href="#">Men </a>
-                            <ul class="cute">
-                                <li class="subitem1"><a href="single.html">Cute Kittens </a></li>
-                                <li class="subitem2"><a href="single.html">Strange Stuff </a></li>
-                                <li class="subitem3"><a href="single.html">Automatic Fails </a></li>
-                            </ul>
-                        </li>
-                        <li class="item2"><a href="#">Women </a>
-                            <ul class="cute">
-                                <li class="subitem1"><a href="single.html">Cute Kittens </a></li>
-                                <li class="subitem2"><a href="single.html">Strange Stuff </a></li>
-                                <li class="subitem3"><a href="single.html">Automatic Fails </a></li>
-                            </ul>
-                        </li>
-                        <li class="item3"><a href="#">Kids</a>
-                            <ul class="cute">
-                                <li class="subitem1"><a href="single.html">Cute Kittens </a></li>
-                                <li class="subitem2"><a href="single.html">Strange Stuff </a></li>
-                                <li class="subitem3"><a href="single.html">Automatic Fails</a></li>
-                            </ul>
-                        </li>
-                        <li class="item4"><a href="#">Accesories</a>
-                            <ul class="cute">
-                                <li class="subitem1"><a href="single.html">Cute Kittens </a></li>
-                                <li class="subitem2"><a href="single.html">Strange Stuff </a></li>
-                                <li class="subitem3"><a href="single.html">Automatic Fails</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="item4"><a href="#">Shoes</a>
-                            <ul class="cute">
-                                <li class="subitem1"><a href="product.html">Cute Kittens </a></li>
-                                <li class="subitem2"><a href="product.html">Strange Stuff </a></li>
-                                <li class="subitem3"><a href="product.html">Automatic Fails </a></li>
-                            </ul>
-                        </li>
+                        @forelse ($categories as $category)
+                        <li class="item1"><a href="#">{{$category->category_name}} </a></li>
+                        @empty
+                        <li class="item1"><a href="#">Aucun produit </a></li>
+                        @endforelse
+                       
+                    
                     </ul>
                 </div>
                 <!--initiate accordion-->
@@ -210,56 +70,30 @@
                 <!--//menu-->
                 <!--seller-->
                 <div class="product-bottom">
-                    <h3 class="cate">Best Sellers</h3>
+                    <h3 class="cate">Autres produits</h3>
+                    @forelse ($products as $product)
                     <div class="product-go">
                         <div class=" fashion-grid">
-                            <a href="single.html"><img class="img-responsive " src="images/pr.jpg" alt=""></a>
+                            <a href="{{ url('/detail_product/' . $product->id) }}"><img class="img-responsive " src="/public_images/{{ json_decode($product->product_image)['0'] }}" alt=""></a>
                         </div>
                         <div class=" fashion-grid1">
-                            <h6 class="best2"><a href="single.html">Lorem ipsum dolor sitamet consectetuer </a>
+                            <h6 class="best2"><a href="{{ url('/detail_product/' . $product->id) }}">{{$product->product_description}} </a>
                             </h6>
-                            <span class=" price-in1"> $40.00</span>
+                            <span class=" price-in1"> {{$product->product_price}} Fcfa</span>
                         </div>
                         <div class="clearfix"> </div>
-                    </div>
-                    <div class="product-go">
-                        <div class=" fashion-grid">
-                            <a href="single.html"><img class="img-responsive " src="images/pr1.jpg" alt=""></a>
-                        </div>
-                        <div class=" fashion-grid1">
-                            <h6 class="best2"><a href="single.html">Lorem ipsum dolor sitamet consectetuer </a>
-                            </h6>
-                            <span class=" price-in1"> $40.00</span>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="product-go">
-                        <div class=" fashion-grid">
-                            <a href="single.html"><img class="img-responsive " src="images/pr2.jpg" alt=""></a>
-                        </div>
-                        <div class=" fashion-grid1">
-                            <h6 class="best2"><a href="single.html">Lorem ipsum dolor sitamet consectetuer </a>
-                            </h6>
-                            <span class=" price-in1"> $40.00</span>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="product-go">
-                        <div class=" fashion-grid">
-                            <a href="single.html"><img class="img-responsive " src="images/pr3.jpg" alt=""></a>
-                        </div>
-                        <div class=" fashion-grid1">
-                            <h6 class="best2"><a href="single.html">Lorem ipsum dolor sitamet consectetuer </a>
-                            </h6>
-                            <span class=" price-in1"> $40.00</span>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
+                    </div>  
+                    @empty
+                        <div style="text-align: center">Aucun produit </div>
+                    @endforelse
+                   
+                   
+                    
                 </div>
 
                 <!--//seller-->
                 <!--tag-->
-                <div class="tag">
+                {{-- <div class="tag">
                     <h3 class="cate">Tags</h3>
                     <div class="tags">
                         <ul>
@@ -278,7 +112,7 @@
                             <div class="clearfix"> </div>
                         </ul>
                     </div>
-                </div>
+                </div> --}}
             </div>
             <div class="clearfix"> </div>
         </div>

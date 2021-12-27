@@ -349,7 +349,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 	<div class="footer-bottom">
 		<div class="container">
 				<div class="col-sm-3 footer-bottom-cate">
-					<h6>Categories</h6>
+					<h6>Catégories</h6>
 					<ul style="font-size: 20px">
 						@forelse ($categories as $category)
 						<li><a href="#">{{$category->category_name}}</a></li>
@@ -380,7 +380,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 					</ul>
 				</div>
 				<div class="col-sm-3 footer-bottom-cate cate-bottom">
-					<h6> média social</h6>
+					<h6> Média social</h6>
 					<ul>
 					<li style="font-size: 25px">
 						<a href="#"> <i class="ti-linkedin"> </i> </a>
