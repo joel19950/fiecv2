@@ -10,6 +10,7 @@
 <!--theme-style-->
 <link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css" media="all" />	
 <!--//theme-style-->
+<link rel="stylesheet" href="{{ asset('backend/themify-icons.css') }}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Fashion Mania Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
@@ -22,6 +23,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="{{asset('js/simpleCart.min.js')}}"> </script>
 <!-- slide -->
 <script src="{{asset('js/responsiveslides.min.js')}}"></script>
+
    <script>
     $(function () {
       $("#slider").responsiveSlides({
@@ -348,29 +350,29 @@ RIGHT SIDEBAR TOGGLE SECTION
 		<div class="container">
 				<div class="col-sm-3 footer-bottom-cate">
 					<h6>Categories</h6>
-					<ul>
-						<li><a href="#">Aliment</a></li>
-						<li><a href="#">Produits</a></li>
-						<li><a href="#">Santé</a></li>
-						<li><a href="#">Boutique</a></li>
-						<li><a href="#">Fruit</a></li>
+					<ul style="font-size: 20px">
+						@forelse ($categories as $category)
+						<li><a href="#">{{$category->category_name}}</a></li>
+						@empty
+						<li> Aucune catégorie </li>	  
+						@endforelse
+						
 						
 					</ul>
 				</div>
 				<div class="col-sm-3 footer-bottom-cate">
 					<h6>Contact info</h6>
-					<ul>
-						<li><a href="#">Curabitur sapien</a></li>
-						<li><a href="#">Dignissim purus</a></li>
-						<li><a href="#">Tempus pretium</a></li>
-						<li><a href="#">Dignissim neque</a></li>
-						<li><a href="#">Ornared id aliquet</a></li>
+					<ul style="font-size: 20px">
+						
+						<li><a href="#">LT Cameroun, Douala</a></li>
+						<li><a href="#">Tel: +237 676 471 717</a></li>
+						<li><a href="#">Email: contact@promo24.com</a></li>
 						
 					</ul>
 				</div>
 				<div class="col-sm-3 footer-bottom-cate">
 					<h6>Villes</h6>
-					<ul>
+					<ul style="font-size: 20px">
 						<li><a href="#">Douala</a></li>
 						<li><a href="#">Yaoundé</a></li>
 						<li><a href="#">Bafoussam</a></li>
@@ -378,14 +380,15 @@ RIGHT SIDEBAR TOGGLE SECTION
 					</ul>
 				</div>
 				<div class="col-sm-3 footer-bottom-cate cate-bottom">
-					<h6> Adresse</h6>
+					<h6> média social</h6>
 					<ul>
-						<li>Aliquam metus  dui. </li>
-						<li>orci, ornareidquet</li>
-						<li> ut,DUI.</li>
-						<li>nisi, dignissim</li>
-						<li>gravida at.</li>
-						<li class="phone">PH : 6985792466</li>
+					<li style="font-size: 25px">
+						<a href="#"> <i class="ti-linkedin"> </i> </a>
+						<a href="#"> <i class="ti-facebook"> </i> </a>
+						<a href="#"> <i class="ti-instagram"> </i></a>
+						<a href="#"> <i class="ti-twitter"> </i></a>
+						
+					</li>
 					</ul>
 				</div>
 				<div class="clearfix"> </div>

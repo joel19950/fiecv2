@@ -47,10 +47,11 @@
                             <h6> Disponible </h6>
 
                         </div>
-                        <i class="ti ti-facebook"> </i>
-                        <i class="ti ti-linkedin"> </i>
-                        <i class="ti ti-youtube"> </i>
-
+						
+                        <a href="#" style="font-size: 25px" > <i class="ti ti-facebook"> </i></a>
+                        <a href="#"  style="font-size: 25px"> <i class="ti ti-linkedin"> </i></a>
+                        <a href="#" style="font-size: 25px" > <i class="ti ti-youtube"> </i></a>
+                        <a href="#"  style="font-size: 25px">  <i class="ti-twitter"> </i></a>
                         {{-- <a href="#" class="cart item_add">details</a> --}}
                     </div>
                 </div>
