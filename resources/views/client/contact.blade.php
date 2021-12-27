@@ -1,3 +1,5 @@
+
+@extends('client.layouts.clientlayout')
 @section('content')
 <div class="contact">
     <div class="container">
@@ -26,7 +28,7 @@
                             <span>Message</span>
                             <textarea > </textarea>								
                             </div>
-                        <input type="submit" value="Send">
+                        <input type="submit" value="Envoyer">
                     </form>
                 </div>
                 <!---728x90--->

@@ -9,15 +9,15 @@ class CityController extends Controller
     //
 public function list_city(){
     $cities=City::orderBy('id', 'DESC')->get();
-    return view('admin.city.cityList')->with('cities', $cities);
+    return view('admin.city.list_city')->with('cities', $cities);
 }
 
 
-public function add_city(Request $request){ 
+public function add_city_save(Request $request){ 
     $city=new City();     
     $city->city_name = $request->input('city_name');
     $city->save();
-    return redirect('list_city')->with('status','La ville   '.$city->city_name.'       à été ajouté');
+    return redirect('/list_city')->with('status','La ville   '.$city->city_name.'       à été ajouté');
     
                                             }
 

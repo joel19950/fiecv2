@@ -100,7 +100,7 @@
                                         <tr>
                                             <th>Ordre #</th>
 
-                                            <th>category</th>
+                                            <th>categorie</th>
                                             <th style="text-align:center">action</th>
                                         </tr>
                                     </thead>
@@ -134,7 +134,7 @@
                                 </table>
 
                             </div>
-
+{{$categories->links('pagination.paginatelinks')}}
                         </div>
                     </div>
                 </div>

@@ -142,7 +142,7 @@
         </div>
         <!-- content-wrapper ends -->
         <!-- partial:../../partials/_footer.html -->
-        @include('include.footerAdmin')
+        @include('include.footeradmin')
         <!-- partial -->
     </div>
 

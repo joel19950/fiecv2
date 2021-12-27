@@ -17,7 +17,7 @@ public function add_product_save(Request $request)
             'product_price' => 'required',
             'product_name' => 'required',
             'product_description' => 'required',
-            'product_category' => 'required',
+        
             'product_image' => 'required',
             'product_image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5048'
 
@@ -28,7 +28,7 @@ public function add_product_save(Request $request)
 
      if ($request->hasFile('product_image')) {
         //1 get file name with extension
-
+       
         foreach ($request->file('product_image') as $image) {
             $name = $image->getClientOriginalName();
             $image->move(public_path() . '/public_images/', $name);
@@ -43,21 +43,19 @@ public function add_product_save(Request $request)
     $product->product_name = $request->input('product_name');
     $product->product_description = $request->input('product_description');
     $product->product_price = $request->input('product_price');
-    $product->product_category = $request->input('product_category');
-    $product->product_catalogue= $request->input('product_catalogue');
+    $product->category_id = $request->input('category_id');
+    $product->catalogue_id= $request->input('catalogue_id');
+    $product->shop_id= $request->input('shop_id');
     $product->product_city = $request->input('product_city');
     $product->product_status = $request->input('product_status');
     $product->product_image = json_encode($data);
     $product->product_status = 1;
 
-    if ($product->encombrement < 0 || $product->encombrement > 10) {
-        Toastr::warning("Le niveau d'encombrement doit être compris entre 0 et 10 :)", 'Warning');
-        return redirect('product_add_a');
-    } else {
+  
         $product->save();
         Toastr::success("le product ' . $product->product_name . ' a été ajouter avec succes :)", 'Success');
         return redirect()->back();
-    }
+    
     
 }
 
@@ -87,7 +85,8 @@ public function delete_product($id)
 
 
 public function list_product(){
-     return view('admin.product.list_product');
+    $products=Product::orderBy('id','DESC')->paginate(6);
+     return view('admin.product.list_product')->with('products',$products);
 }
 
 public function desactiverproduct($id)
@@ -142,8 +141,8 @@ public function desactiverproduct($id)
         $product->product_name = $request->input('product_name');
         $product->product_description = $request->input('product_description');
         $product->product_price = $request->input('product_price');
-        $product->product_category = $request->input('product_category');
-        $product->product_catalogue= $request->input('product_catalogue');
+        $product->category_id = $request->input('category_id');
+        $product->catalogue_id= $request->input('catalogue_id');
         $product->product_city = $request->input('product_city');
         $product->product_status = $request->input('product_status');
         $product->product_image = json_encode($data);
@@ -156,6 +155,13 @@ public function desactiverproduct($id)
 
 
 
+public function add_product(){
+    return view('admin.product.add_product');
+}
 
+public function detail_product($id){
+    $product=Product::find($id);
+    return view('client.detail_product')->with('product', $product);
+}
 
 }

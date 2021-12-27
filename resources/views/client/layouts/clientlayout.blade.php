@@ -249,7 +249,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 					</ul>
 				</div> --}}
 				<div class="col-sm-4 logo">
-					<a href="index.html"><img src="{{asset('images/logo-promo24-v2.jpg')}}" alt="" height="75px" width="50px"></a>	
+					<a href="index.html"><img src="{{asset('images/logo.jpg')}}" alt="" height="100px" width="75px"></a>	
 				</div>
 		
 			<div class="col-sm-4 header-left">		
@@ -287,17 +287,17 @@ RIGHT SIDEBAR TOGGLE SECTION
 		</div>
 		<div class="clearfix"> </div>
 			<!---pop-up-box---->
-					  <script type="text/javascript" src="js/modernizr.custom.min.js"></script>    
-					<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
-					<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+					  <script type="text/javascript" src="{{asset('js/modernizr.custom.min.js')}}"></script>    
+					<link href="{{asset('css/popuo-box.css')}}" rel="stylesheet" type="text/css" media="all"/>
+					<script src="{{asset('js/jquery.magnific-popup.js')}}" type="text/javascript"></script>
 					<!---//pop-up-box---->
 				<div id="small-dialog" class="mfp-hide">
 				<div class="search-top">
 						<div class="login">
 							<input type="submit" value="">
-							<input type="text" value="Type something..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">		
+							<input type="text" value="Rechercher..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">		
 						</div>
-						<p>	Shopping</p>
+						<p>	Recherche</p>
 					</div>				
 				</div>
 				 <script>
@@ -395,5 +395,101 @@ RIGHT SIDEBAR TOGGLE SECTION
 </div>
 
 <!--//footer-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{-- <script src="{{asset('js/jquery.min.js')}}"></script>
+<script src="{{asset('js/imagezoom.js')}}"></script>
+<!-- start menu -->
+<link href="{{asset('css/memenu.css')}}" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="{{asset('js/memenu.js')}}"></script>
+ <script>$(document).ready(function(){$(".memenu").memenu();});</script> 
+
+<script src="{{asset('js/simpleCart.min.js')}}"> </script>
+<!--initiate accordion--> --}}
+						<script type="text/javascript">
+							$(function() {
+							    var menu_ul = $('.menu-drop > li > ul'),
+							           menu_a  = $('.menu-drop > li > a');
+							    menu_ul.hide();
+							    menu_a.click(function(e) {
+							        e.preventDefault();
+							        if(!$(this).hasClass('active')) {
+							            menu_a.removeClass('active');
+							            menu_ul.filter(':visible').slideUp('normal');
+							            $(this).addClass('active').next().stop(true,true).slideDown('normal');
+							        } else {
+							            $(this).removeClass('active');
+							            $(this).next().stop(true,true).slideUp('normal');
+							        }
+							    });
+							
+							});
+						</script>
+						<!-- FlexSlider -->
+  <script defer src="{{asset('js/jquery.flexslider.js')}}"></script>
+<link rel="stylesheet" href="{{asset('css/flexslider.css')}}" type="text/css" media="screen" />
+
+<script>
+// Can also be used with $(document).ready()
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide",
+    controlNav: "thumbnails"
+  });
+});
+</script>
+<!---pop-up-box---->
+					<link href="{{asset('css/popuo-box.css')}}" rel="stylesheet" type="text/css" media="all"/>
+					<script src="{{asset('js/jquery.magnific-popup.js')}}" type="text/javascript"></script>
+					<!---//pop-up-box---->
+					 <script>
+						$(document).ready(function() {
+						$('.popup-with-zoom-anim').magnificPopup({
+							type: 'inline',
+							fixedContentPos: false,
+							fixedBgPos: true,
+							overflowY: 'auto',
+							closeBtnInside: true,
+							preloader: false,
+							midClick: true,
+							removalDelay: 300,
+							mainClass: 'my-mfp-zoom-in'
+						});
+																						
+						});
+				</script>	
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

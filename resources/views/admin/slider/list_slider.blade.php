@@ -75,11 +75,20 @@
                                                 </div>
                                                 <div class="form-group row">
                                                     <div class="col-lg-3">
+                                                        <label class="col-form-label">Price : </label>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <input class="form-control" maxlength="25" type="number"
+                                                            name="slider_price" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-lg-3">
                                                         <label class="col-form-label">Description:</label>
                                                     </div>
                                                     <div class="col-lg-8">
                                                         <input class="form-control" type="text"
-                                                            name="slider_shot_description" required>
+                                                            name="slider_description" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -133,7 +142,7 @@
 
                                                 <tr>
                                                     <td>{{ $inc }}</td>
-                                                    <td><img src="/slider_images/{{ $slider->slider_image }}"></td>
+                                                    <td><img src="{{ $slider->slider_image }}"></td>
                                                     <td>{{ $slider->slider_name }}</td>
                                                     <td>{{ $slider->created_at->format('d/m/Y   H:i:s') }}</td>
 
@@ -147,7 +156,7 @@
                                                     </td>
                                                     <td>
                                                         <a
-                                                            onclick="window.location='{{ url('/slider_update_save/' . $slider->id) }}'">
+                                                            onclick="window.location='{{ url('/update_slider_save/' . $slider->id) }}'">
                                                             <i class="ti-pencil-alt"> </i></a>
                                                     </td>
 
@@ -174,7 +183,7 @@
                                             @empty
                                                 <tr>
                                                     <td style="text-align: center;" colspan="6">
-                                                        <H1> Aucun Sliders Ajouter</H1>
+                                                        <p> Aucun Sliders Ajouter</p>
                                                     </td>
                                                 </tr>
                                             @endforelse

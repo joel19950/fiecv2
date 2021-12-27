@@ -9,7 +9,10 @@ class Shop extends Model
 {
     protected $table='shops';
     use HasFactory;
-    public function shop(){
-         return $this->hasMany(Product::class);
+    public function city(){
+         return $this->belongsTo(City::class);
     }
+    public function products(){
+        return $this->hasMany(Product::class);
+   }
 }

@@ -58,10 +58,10 @@
                                         <label class="col-form-label">Catégorie</label>
                                     </div>
                                     <div class="col-lg-8">
-                                        <select id="cname" class="form-control" name="product_category" required>
+                                        <select id="cname" class="form-control" name="category_id" required>
                                             
-                                                @foreach ($category as $cate)
-                                                    <option>{{ $cate->category_name }} </option>
+                                                @foreach ($categories as $cate)
+                                                    <option value="{{$cate->id}}">{{ $cate->category_name }} </option>
                                                 @endforeach
                                           
                                         </select>
@@ -72,10 +72,10 @@
                                         <label class="col-form-label">Catalogue</label>
                                     </div>
                                     <div class="col-lg-8">
-                                        <select id="cname" class="form-control" name="product_catalogue" required>
+                                        <select id="cname" class="form-control" name="catalogue_id" required>
                                            
-                                                @foreach($catalogue as $cata)
-                                                     <option>{{ $cata->catalogue_name }} </option>
+                                                @foreach($catalogues as $cata)
+                                                     <option value="{{$cata->id}}">{{ $cata->catalogue_name }} </option>
                                                 @endforeach
                                            
                                         </select>
@@ -92,7 +92,13 @@
                                         <label class="col-form-label">Boutique :</label>
                                     </div>
                                     <div class="col-lg-8">
-                                        <input class="form-control" type="text" name="product_shop" required>
+                                        <select id="cname" class="form-control" name="shop_id" required>
+                                           
+                                                @foreach($shops as $s)
+                                                     <option value="{{$s->id}}">{{ $s->shop_name }} </option>
+                                                @endforeach
+                                           
+                                        </select>
                                     </div>
                                 </div>
 

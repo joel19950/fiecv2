@@ -9,11 +9,11 @@ class CatalogueController extends Controller
     //retourner les catalogues
 public function list_catalogue(){
 $catalogues=Catalogue::paginate(3);
-return view('admin.catalogue.lis t_catalogue')->with('catalogues',$catalogues);
+return view('admin.catalogue.list_catalogue')->with('catalogues',$catalogues);
 }
 
 
-public function add_catalogue(Request $request){
+public function add_catalogue_save(Request $request){
 
 $catalogue= new Catalogue();
 $catalogue->catalogue_name = $request->input('catalogue_name');
