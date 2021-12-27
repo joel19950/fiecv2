@@ -2,7 +2,7 @@
 @section('content')
     <div class="main-panel">
         <div class="content-wrapper">
-            <input type="hidden" value="{{ $inc = 1}}">
+            <input type="hidden" value="{{ $inc = 1 }}">
 
             <div class="card">
                 @if (Session::has('status'))
@@ -22,12 +22,12 @@
                     </div>
                 @endif
                 <div class="card-body">
-                  <div class="row">
+                    <div class="row">
                         <h4 class="card-title col-10">Les villes</h4>
                         <button class="btn btn-outline-primary mb-4" data-toggle="modal" data-target="#exampleModal">
                             Ajouter
-                         </button>
-                  </div>
+                        </button>
+                    </div>
 
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">

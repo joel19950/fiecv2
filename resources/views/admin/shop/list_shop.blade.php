@@ -2,7 +2,7 @@
 @section('content')
     <div class="main-panel">
         <div class="content-wrapper">
-            <input type="hidden" value="{{ $inc = 1}}">
+            <input type="hidden" value="{{ $inc = 1 }}">
 
             <div class="card">
                 @if (Session::has('status'))
@@ -22,12 +22,12 @@
                     </div>
                 @endif
                 <div class="card-body">
-                  <div class="row">
+                    <div class="row">
                         <h4 class="card-title col-10">Les boutiques</h4>
                         <button class="btn btn-outline-primary mb-4" data-toggle="modal" data-target="#exampleModal">
                             Ajouter
-                         </button>
-                  </div>
+                        </button>
+                    </div>
 
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
@@ -67,8 +67,7 @@
                                                         <label class="col-form-label">Nom:</label>
                                                     </div>
                                                     <div class="col-lg-8">
-                                                        <input class="form-control" type="text"
-                                                            name="shop_name" required>
+                                                        <input class="form-control" type="text" name="shop_name" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -78,8 +77,8 @@
                                                         <label class="col-form-label">Description:</label>
                                                     </div>
                                                     <div class="col-lg-8">
-                                                        <input class="form-control" type="text"
-                                                            name="shop_description" required>
+                                                        <input class="form-control" type="text" name="shop_description"
+                                                            required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -89,14 +88,15 @@
                                                         <label class="col-form-label">Ville:</label>
                                                     </div>
                                                     <div class="col-lg-8">
-                                                        <select name="city_id" id=""  class="form-control">
+                                                        <select name="city_id" id="" class="form-control">
                                                             @forelse ($cities as $city)
-                                                            <option value="{{$city->id}}">{{$city->city_name}} </option>
+                                                                <option value="{{ $city->id }}">{{ $city->city_name }}
+                                                                </option>
                                                             @empty
-                                                            <option>Aucun </option>
-                                                             @endforelse
-                                                             </select>
-                                                     </div>
+                                                                <option>Aucun </option>
+                                                            @endforelse
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
 

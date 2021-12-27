@@ -1,6 +1,6 @@
 @extends('admin.layouts.appadmin')
 @section('content')
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <div class="main-panel">
         <div class="content-wrapper">
             <div class="row grid-margin">
@@ -59,11 +59,11 @@
                                     </div>
                                     <div class="col-lg-8">
                                         <select id="cname" class="form-control" name="category_id" required>
-                                            
-                                                @foreach ($categories as $cate)
-                                                    <option value="{{$cate->id}}">{{ $cate->category_name }} </option>
-                                                @endforeach
-                                          
+
+                                            @foreach ($categories as $cate)
+                                                <option value="{{ $cate->id }}">{{ $cate->category_name }} </option>
+                                            @endforeach
+
                                         </select>
                                     </div>
                                 </div>
@@ -73,19 +73,19 @@
                                     </div>
                                     <div class="col-lg-8">
                                         <select id="cname" class="form-control" name="catalogue_id" required>
-                                           
-                                                @foreach($catalogues as $cata)
-                                                     <option value="{{$cata->id}}">{{ $cata->catalogue_name }} </option>
-                                                @endforeach
-                                           
+
+                                            @foreach ($catalogues as $cata)
+                                                <option value="{{ $cata->id }}">{{ $cata->catalogue_name }} </option>
+                                            @endforeach
+
                                         </select>
                                     </div>
                                 </div>
-                               
-                            
-                                
-                                
-                               
+
+
+
+
+
 
                                 <div class="form-group row">
                                     <div class="col-lg-3">
@@ -93,11 +93,11 @@
                                     </div>
                                     <div class="col-lg-8">
                                         <select id="cname" class="form-control" name="shop_id" required>
-                                           
-                                                @foreach($shops as $s)
-                                                     <option value="{{$s->id}}">{{ $s->shop_name }} </option>
-                                                @endforeach
-                                           
+
+                                            @foreach ($shops as $s)
+                                                <option value="{{ $s->id }}">{{ $s->shop_name }} </option>
+                                            @endforeach
+
                                         </select>
                                     </div>
                                 </div>
@@ -110,7 +110,7 @@
                                         <input class="form-control" type="text" name="product_city" required>
                                     </div>
                                 </div>
-                                
+
                                 <div class="form-group row">
                                     <div class="col-lg-3">
                                         <label class="col-form-label">Image</label>
@@ -154,7 +154,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="form-group row">
                                 <div class="col-lg-3">
                                 </div>

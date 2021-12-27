@@ -87,8 +87,8 @@
                                                         <label class="col-form-label">Description:</label>
                                                     </div>
                                                     <div class="col-lg-8">
-                                                        <input class="form-control" type="text"
-                                                            name="slider_description" required>
+                                                        <input class="form-control" type="text" name="slider_description"
+                                                            required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
