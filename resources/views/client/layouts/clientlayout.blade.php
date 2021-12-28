@@ -195,9 +195,20 @@ RIGHT SIDEBAR TOGGLE SECTION
 					<a href="{{URL::to('/')}}"><img src="{{asset('images/logo.jpg')}}" alt="" height="100px" width="75px"></a>	
 				</div>
 		
-			<div class="col-sm-4 header-left">	
+			
+{{-- 
+				@foreach($available_locales as $locale_name => $available_locale)
+				@if($available_locale === $current_locale)
+					<span class="ml-2 mr-2 text-gray-700">{{ $locale_name }}</span>
+				@else
+					<a class="ml-1 underline ml-2 mr-2" href="language/{{ $available_locale }}">
+						<span>{{ $locale_name }}</span>
+					</a>
+				@endif
+			  @endforeach --}}
+		
 				 	
-					<p class="log"><a href="account.html"> <img src="{{asset('images/france.png')}}" height="12px" width="18px"></a>
+					 <p class="log"><a href="account.html"> <img src="{{asset('images/france.png')}}" height="12px" width="18px"></a>
 						<span>ou</span><a  href="account.html"> <img src="{{asset('images/anglais.jpg')}}" height="12px" width="18px"> </a></p>
 			
 					<div class="clearfix"> </div>
