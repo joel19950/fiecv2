@@ -30,7 +30,7 @@
                                 <div class="form-group row">
                                     <input type="hidden" value="{{ $product->id }}" name="id">
                                     <div class="col-lg-3">
-                                        <label class="col-form-label">Nom : </label>
+                                        <label class="col-form-label"> {{__('Nom')}}: </label>
                                     </div>
                                     <div class="col-lg-8">
                                         <input class="form-control" maxlength="25" type="text" name="product_name"
@@ -39,7 +39,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-lg-3">
-                                        <label class="col-form-label">Description:</label>
+                                        <label class="col-form-label"> {{__('Description')}}:</label>
                                     </div>
                                     <div class="col-lg-8">
                                         <input class="form-control" type="text" name="product_description"
@@ -49,7 +49,7 @@
 
                                 <div class="form-group row">
                                     <div class="col-lg-3">
-                                        <label class="col-form-label">Prix:</label>
+                                        <label class="col-form-label">{{__('Prix')}}:</label>
                                     </div>
                                     <div class="col-lg-8">
                                         <input class="form-control" type="number" name="product_price"
@@ -59,7 +59,7 @@
 
                                 <div class="form-group row">
                                     <div class="col-lg-3">
-                                        <label class="col-form-label">Catégorie</label>
+                                        <label class="col-form-label"> {{__('Catégorie')}}</label>
                                     </div>
                                     <div class="col-lg-8">
 
@@ -79,7 +79,7 @@
 
                                 <div class="form-group row">
                                     <div class="col-lg-3">
-                                        <label class="col-form-label">Boutique</label>
+                                        <label class="col-form-label"> {{__('Boutique')}}</label>
                                     </div>
                                     <div class="col-lg-8">
                                         <select id="cname" class="form-control" name="product_shop">
@@ -98,7 +98,7 @@
 
                                 <div class="form-group row">
                                     <div class="col-lg-3">
-                                        <label class="col-form-label">Ville</label>
+                                        <label class="col-form-label"> {{__('Ville')}}</label>
                                     </div>
                                     <div class="col-lg-8">
                                         <select id="cname" class="form-control" name="product_city">
@@ -116,7 +116,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-lg-3">
-                                        <label class="col-form-label">Image</label>
+                                        <label class="col-form-label"> {{__('Image')}}</label>
                                     </div>
                                     <div class="col-lg-8">
 
@@ -125,7 +125,7 @@
                                             <input type="file" name="product_image[]" class="form-control">&nbsp;
                                             <div class="input-group-btn">
                                                 <button class="btn btn-success add" type="button"><i
-                                                        class="ti ti-plus"></i>&nbsp;Add</button>
+                                                        class="ti ti-plus"></i>&nbsp; {{__('Ajouter')}}</button>
                                             </div>
                                         </div>
 
@@ -135,7 +135,7 @@
                                                 <input type="file" name="product_image[]" class="form-control"> &nbsp;
                                                 <div class="input-group-btn">
                                                     <button class="btn btn-danger remove" type="button"><i
-                                                            class="ti ti-close"></i>&nbsp; Remove</button>
+                                                            class="ti ti-close"></i>&nbsp;  {{__('Supprimer')}}</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -160,7 +160,7 @@
                                 </div>
                                 <div class="col-lg-8">
                                     <input type="submit" value="Envoyer" class="btn btn-warning">
-                                    <a href="{{ URL::to('/list_product_a') }}" class="btn btn-danger"> Annuler</a>
+                                    <a href="{{ URL::to('/list_product_a') }}" class="btn btn-danger">  {{__('Annuler')}}</a>
 
                                 </div>
                             </div>

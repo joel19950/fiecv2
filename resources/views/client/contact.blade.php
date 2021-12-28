@@ -2,7 +2,7 @@
 @section('content')
     <div class="contact">
         <div class="container">
-            <h1>Contact</h1>
+            <h1> {{__('Contact')}}</h1>
             @if (Session::has('status'))
                 <div class="alert alert-success">
                     {{ Session::get('status') }}
@@ -27,25 +27,25 @@
                         @csrf
                         <div class="contact-bottom">
                             <div class="col-md-4 in-contact">
-                                <span>Nom</span>
+                                <span> {{__('Nom')}}</span>
                                 <input type="text" name="name">
                             </div>
                             <div class="col-md-4 in-contact">
-                                <span>Email</span>
+                                <span> {{__('Email')}}</span>
                                 <input type="text" name="email">
                             </div>
                             <div class="col-md-4 in-contact">
-                                <span>Téléphone</span>
+                                <span> {{__('Téléphone')}}</span>
                                 <input type="text" name="phone">
                             </div>
                             <div class="clearfix"> </div>
                         </div>
                         <div class="contact-bottom-top">
-                            <span>Sujet</span>
+                            <span> {{__('Sujet')}}</span>
                             <input name="subject" type="text" class="form-control">
                         </div>
                         <div class="contact-bottom-top">
-                            <span>Message</span>
+                            <span> {{__('Message')}}</span>
                             <textarea name="message"> </textarea>
                         </div>
                         <input type="submit" value="Envoyer">
@@ -54,29 +54,29 @@
                 <!---728x90--->
                 <div class="address">
                     <div class=" address-more">
-                        <h2>Adresse</h2>
+                        <h2> {{__('Adresse')}}</h2>
                         <div class="col-md-4 address-grid">
                             <i class="glyphicon glyphicon-map-marker"></i>
                             <div class="address1">
-                                <p>Douala</p>
-                                <p>LT Cameroun</p>
+                                <p> {{__('Douala')}}</p>
+                                <p> {{__('LT Cameroun')}}</p>
                             </div>
                             <div class="clearfix"> </div>
                         </div>
-                        <h2>Téléphone</h2>
+                        <h2>{{__('Téléphone ')}}</h2>
                         <div class="col-md-4 address-grid ">
                             <i class="glyphicon glyphicon-phone"></i>
                             <div class="address1">
-                                <p>+237 676 471 717</p>
+                                <p> {{__('+237 676 471 717')}}</p>
                             </div>
                             <div class="clearfix"> </div>
                         </div>
-                        <h2>Email</h2>
+                        <h2> {{__('Email')}}</h2>
                         <div class="col-md-4 address-grid ">
                             <i class="glyphicon glyphicon-envelope"></i>
                             <div class="address1">
                                 {{--  mailto:@example.com--}}
-                                <p><a href="#"> contact@promo24.com</a></p>
+                                <p><a href="#">  {{__('contact@promo24.com')}}</a></p>
                             </div>
                             <div class="clearfix"> </div>
                         </div>

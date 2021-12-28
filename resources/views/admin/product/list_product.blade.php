@@ -24,9 +24,9 @@
                 <div class="card-body">
 
                     <div class="row">
-                        <h4 class="card-title col-10">Produits</h4>
+                        <h4 class="card-title col-10">{{__('Produits')}}</h4>
                         <a href="{{ URL::to('/add_product') }}" class="btn btn-outline-primary mb-4">
-                            Ajouter
+                            {{__('Ajouter')}}
                         </a>
                     </div>
 
@@ -37,13 +37,13 @@
 
                                     <thead>
                                         <tr>
-                                            <th>Ordre #</th>
-                                            <th>Image</th>
-                                            <th>Nom</th>
-                                            <th>Prix</th>
-                                            <th>Date de création</th>
-                                            <th>Status</th>
-                                            <th colspan="3" style="text-align:center">action</th>
+                                            <th> {{__('Ordre')}} #</th>
+                                            <th>{{__('Image')}}</th>
+                                            <th>{{__('Nom')}}</th>
+                                            <th> {{__('Prix')}}</th>
+                                            <th>{{__('Date de création')}}</th>
+                                            <th> {{__('Status')}}</th>
+                                            <th colspan="3" style="text-align:center">{{__('action')}}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -63,9 +63,9 @@
 
                                                     <td>
                                                         @if ($product->product_status == 1)
-                                                            <label class="badge badge-success"> Activé</label>
+                                                            <label class="badge badge-success">  {{__('Activer')}}</label>
                                                         @else
-                                                            <label class="badge badge-danger"> Desactivé</label>
+                                                            <label class="badge badge-danger"> {{__('Desactiver')}} </label>
                                                         @endif
 
                                                     </td>
@@ -80,10 +80,10 @@
                                                     <td>
                                                         @if ($product->product_status == 1)
                                                             <button class="btn btn-outline-warning"
-                                                                onclick="window.location='{{ url('/desactiverproduct/' . $product->id) }}'">désactiver</button>
+                                                                onclick="window.location='{{ url('/desactiverproduct/' . $product->id) }}'"> {{__('Désactiver')}}</button>
                                                         @else
                                                             <button class="btn btn-outline-success"
-                                                                onclick="window.location='{{ url('/activerproduct/' . $product->id) }}'">activer</button>
+                                                                onclick="window.location='{{ url('/activerproduct/' . $product->id) }}'"> {{__('Activer')}}</button>
                                                         @endif
                                                     </td>
                                                 </tr>
@@ -91,7 +91,7 @@
 
                                             @empty
                                                 <tr>
-                                                    <td colspan="9" style="text-align: center"> Aucun Produit disponible
+                                                    <td colspan="9" style="text-align: center"> {{__('Aucun Produit disponible')}}
                                                     </td>
                                                 </tr>
                                             @endforelse

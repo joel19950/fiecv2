@@ -18,14 +18,14 @@
                         <h3><a href="{{ url('/detail_product/' . $product->id) }}">{{$product->product_name}}</a></h3>
                         <div class="price">
                             <h5 class="item_price">{{$product->product_price}} Fcfa</h5>
-                            <a  href="{{ url('/detail_product/' . $product->id) }}" class="item_add">Voir</a>
+                            <a  href="{{ url('/detail_product/' . $product->id) }}" class="item_add"> {{__('Voir')}}</a>
                             <div class="clearfix"> </div>
                         </div>
 
                     </div>
                 </div>
                   @empty
-                      <div style="text-align: center"><h1> <strong>Aucun produit </strong></h1> </div>
+                      <div style="text-align: center"><h1> <strong> {{__('Aucun produit')}}</strong></h1> </div>
                   @endforelse
                    
 
@@ -35,12 +35,12 @@
             <div class="col-md-3 product-bottom">
                 <!--categories-->
                 <div class=" rsidebar span_1_of_left">
-                    <h3 class="cate">Catégories</h3>
+                    <h3 class="cate"> {{__('Catégories')}}</h3>
                     <ul class="menu-drop">
                         @forelse ($categories as $category)
                         <li class="item1"><a href="#">{{$category->category_name}} </a></li>
                         @empty
-                        <li class="item1"><a href="#">Aucun produit </a></li>
+                        <li class="item1"><a href="#"> {{__('Aucun produit')}}  </a></li>
                         @endforelse
                        
                     
@@ -83,7 +83,7 @@
                         <div class="clearfix"> </div>
                     </div>  
                     @empty
-                        <div style="text-align: center">Aucun produit </div>
+                        <div style="text-align: center">{{__('Aucun produit')}} </div>
                     @endforelse
                    
                    

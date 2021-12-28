@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Home </title>
+<title>  {{__('Accueil')}} </title>
 <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="{{asset('js/jquery.min.js')}}"></script>
@@ -212,10 +212,10 @@ RIGHT SIDEBAR TOGGLE SECTION
 				</div>
 		 <div class="col-sm-8 h_menu4">
 				<ul class="memenu skyblue">
-					<li class=" grid"><a  href="{{URL::to('/')}}">Accueil</a></li>	
-				    <li><a  href="{{URL::to('/aboutus')}}">A propos</a></li>
-				    <li class="grid"><a  href="{{URL::to('/products')}}">Produits </a> </li>
-					<li><a class="color6" href="{{URL::to('/contact')}}">Conact</a></li>
+					<li class=" grid"><a  href="{{URL::to('/')}}"> {{__('Accueil')}}</a></li>	
+				    <li><a  href="{{URL::to('/aboutus')}}"> {{__('A propos')}}</a></li>
+				    <li class="grid"><a  href="{{URL::to('/products')}}">{{__('Produits')}} </a> </li>
+					<li><a class="color6" href="{{URL::to('/contact')}}"> {{__('Contact')}}</a></li>
 			  	</ul> 
 			</div>
 				<div class="col-sm-2 search">		
@@ -234,7 +234,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 								@csrf
 								{{-- <input type="submit" value=""> --}}
 								<input type="text" name="search" value="Rechercher..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">		
-							 	<p>	<button type="submit" class="btn btn-success">recherche </button></p>
+							 	<p>	<button type="submit" class="btn btn-success"> {{__('recherche')}} </button></p>
 							</form>
 						</div>
 						
@@ -276,7 +276,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.91163207516!2d2.3470599!3d48.85885894999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C+France!5e0!3m2!1sen!2sin!4v1436340519910" allowfullscreen=""></iframe>
 			</div>
 			<div class="col-md-4 top-footer1">
-				<h2>Newsletter</h2>
+				<h2> {{__('Newsletter')}}</h2>
 					<form>
 						<input type="text" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
 						<input type="submit" value="SUBSCRIBE">
@@ -288,38 +288,38 @@ RIGHT SIDEBAR TOGGLE SECTION
 	<div class="footer-bottom">
 		<div class="container">
 				<div class="col-sm-3 footer-bottom-cate">
-					<h6>Catégories</h6>
+					<h6> {{__('Catégories')}}</h6>
 					<ul style="font-size: 20px">
 						@forelse ($categories as $category)
 						<li><a href="#">{{$category->category_name}}</a></li>
 						@empty
-						<li> Aucune catégorie </li>	  
+						<li>  {{__('Aucune catégorie')}} </li>	  
 						@endforelse
 						
 						
 					</ul>
 				</div>
 				<div class="col-sm-3 footer-bottom-cate">
-					<h6>Contact info</h6>
+					<h6> {{__('Contact info')}}</h6>
 					<ul style="font-size: 20px">
 						
-						<li><a href="#">LT Cameroun, Douala</a></li>
-						<li><a href="#">Tel: +237 676 471 717</a></li>
-						<li><a href="#">Email: contact@promo24.com</a></li>
+						<li><a href="#"> {{__('LT Cameroun, Douala')}}</a></li>
+						<li><a href="#"> {{__('Tel: +237 676 471 717')}}</a></li>
+						<li><a href="#">{{__('Email: contact@promo24.com ')}}</a></li>
 						
 					</ul>
 				</div>
 				<div class="col-sm-3 footer-bottom-cate">
-					<h6>Villes</h6>
+					<h6> {{__('Villes')}}</h6>
 					<ul style="font-size: 20px">
-						<li><a href="#">Douala</a></li>
-						<li><a href="#">Yaoundé</a></li>
-						<li><a href="#">Bafoussam</a></li>
+						<li><a href="#"> {{__('Douala')}}</a></li>
+						<li><a href="#"> {{__('Yaoundé')}} </a></li>
+						<li><a href="#"> {{__('Bafoussam')}}</a></li>
 						
 					</ul>
 				</div>
 				<div class="col-sm-3 footer-bottom-cate cate-bottom">
-					<h6> Média social</h6>
+					<h6> {{__('Média social')}}</h6>
 					<ul>
 					<li style="font-size: 25px">
 						<a href="#"> <i class="ti-linkedin"> </i> </a>
@@ -331,7 +331,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 					</ul>
 				</div>
 				<div class="clearfix"> </div>
-				<p class="footer-class"> © 2021 promo24. All Rights Reserved | <a href="https://www.linkedin.com/in/jo%C3%ABl-tchoufa-143334183" target="_blank">jnt</a> </p>
+				<p class="footer-class"> © 2021 promo24.  {{__('Tous droits réservés')}}| <a href="https://www.linkedin.com/in/jo%C3%ABl-tchoufa-143334183" target="_blank">jnt</a> </p>
 			</div>
 	</div>
 </div>

@@ -9,6 +9,8 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ChangeLanguageController;
+/*
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -66,6 +68,7 @@ Route::get('/delete_slider/{id}',[SliderController::class, 'delete_slider']);
 
 //Contact Us
 Route::post('/contact', [ContactController::class, 'contact']);
+Route::get ( '/{locale?}', [ChangeLanguageController::class, 'language']);
 
 
 

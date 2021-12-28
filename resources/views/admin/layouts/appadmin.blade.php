@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="promo 24">
 
-    <title>promo 24</title>
+    <title> {{__('promo 24')}}  </title>
     <!-- plugins:css -->
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Tableau de bord </title>
+    <title> {{__('Tableau de bord')}}  </title>
 
     <link rel="stylesheet" href="{{ asset('backend/css/vendor.bundle.base.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/css/vendor.bundle.addons.css') }}">
@@ -55,7 +55,7 @@
                             aria-labelledby="profileDropdown">
                             <a class="dropdown-item">
                                 <i class="ti-power-off text-primary"></i>
-                                Logout
+                                {{__('Logout')}} 
                             </a>
                         </div>
                     </li>
@@ -74,30 +74,30 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">
                             <i class="ti-home menu-icon"></i>
-                            <span class="menu-title">Tableau de bord</span>
+                            <span class="menu-title"> {{__('Tableau de bord')}}  </span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false"
                             aria-controls="form-elements">
                             <i class="ti-clipboard menu-icon"></i>
-                            <span class="menu-title">Affichage</span>
+                            <span class="menu-title"> {{__('Affichage')}} </span>
                             <i class="menu-arrow"></i>
                         </a>
                         <div class="collapse" id="form-elements">
                             <ul class="nav flex-column sub-menu">
                                 <li class="nav-item"><a class="nav-link"
-                                        href="{{ URL::to('/list_city') }}">Villes</a></li>
+                                        href="{{ URL::to('/list_city') }}"> {{__('Villes')}}</a></li>
                                 <li class="nav-item"><a class="nav-link"
-                                        href="{{ URL::to('/list_shop') }}">Boutiques</a></li>
+                                        href="{{ URL::to('/list_shop') }}"> {{__('Boutiques')}}</a></li>
                                 <li class="nav-item"><a class="nav-link"
-                                        href="{{ URL::to('/list_category') }}">Cat&eacute;gories</a></li>
+                                        href="{{ URL::to('/list_category') }}"> {{__('Catégories')}}</a></li>
                                 <li class="nav-item"><a class="nav-link"
-                                        href="{{ URL::to('/list_product') }}">Produits</a></li>
+                                        href="{{ URL::to('/list_product') }}"> {{__('Produits')}}</a></li>
                                 <li class="nav-item"><a class="nav-link"
-                                        href="{{ URL::to('/list_slider') }}">Slides</a></li>
+                                        href="{{ URL::to('/list_slider') }}"> {{__('Slides')}}</a></li>
                                 <li class="nav-item"><a class="nav-link"
-                                        href="{{ URL::to('/list_catalogue') }}">Catalogues</a></li>
+                                        href="{{ URL::to('/list_catalogue') }}"> {{__('Catalogues')}}</a></li>
 
 
                             </ul>

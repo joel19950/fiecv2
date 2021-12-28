@@ -23,9 +23,9 @@
                 @endif
                 <div class="card-body">
                     <div class="row">
-                        <h4 class="card-title col-10">Les catalogues</h4>
+                        <h4 class="card-title col-10"> {{__('Les catalogues')}}</h4>
                         <button class="btn btn-outline-primary mb-4" data-toggle="modal" data-target="#exampleModal">
-                            Ajouter
+                             {{__('Ajouter')}}
                         </button>
                     </div>
 
@@ -34,7 +34,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Nouvelle catalogue</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel"> {{__('Nouvelle catalogue')}}</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -64,7 +64,7 @@
                                             <div class="card-body">
                                                 <div class="form-group row">
                                                     <div class="col-lg-3">
-                                                        <label class="col-form-label">Nom:</label>
+                                                        <label class="col-form-label">{{__('Nom')}} : </label>
                                                     </div>
                                                     <div class="col-lg-8">
                                                         <input class="form-control" maxlength="25" type="text"
@@ -78,7 +78,7 @@
                                                 </div>
                                                 <div class="col-lg-8">
                                                     <input type="submit" value="Envoyer" class="btn btn-success">
-                                                    <button class="btn btn-danger" data-dismiss="modal"> Annuler</button>
+                                                    <button class="btn btn-danger" data-dismiss="modal">{{__('Annuler')}}</button>
 
                                                 </div>
                                             </div>
@@ -98,10 +98,10 @@
 
                                     <thead>
                                         <tr>
-                                            <th>Ordre #</th>
+                                            <th> {{__('Ordre')}} #</th>
 
-                                            <th>catalogue</th>
-                                            <th style="text-align:center">action</th>
+                                            <th> {{__('catalogue')}}</th>
+                                            <th style="text-align:center"> {{__('action')}}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -118,7 +118,7 @@
                                                     <td>
                                                         <a class="btn btn-outline-danger"
                                                             href="{{ url('/delete_catalogue/' . $catalogue->id) }}"
-                                                            id="delete">Delete</a>
+                                                            id="delete"> {{__('supprimer')}}</a>
                                                     </td>
                                                 </tr>
 
@@ -126,7 +126,7 @@
 
                                             @empty
                                                 <tr>
-                                                    <td colspan="3" style="text-align: center"> Aucun catalogue Ajouter
+                                                    <td colspan="3" style="text-align: center"> {{__('Aucun catalogue Ajouter')}}
                                                     </td>
                                                 </tr>
                                             @endforelse

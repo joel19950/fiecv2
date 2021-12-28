@@ -25,9 +25,9 @@
                 <div class="card-body">
 
                     <div class="row">
-                        <h4 class="card-title col-10">Liste des Sliders</h4>
+                        <h4 class="card-title col-10"> {{__('Liste des Sliders')}}</h4>
                         <button class="btn btn-outline-primary mb-4" data-toggle="modal" data-target="#exampleModal">
-                            Ajouter
+                             {{__('Ajouter')}}
                         </button>
                     </div>
 
@@ -36,7 +36,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Nouvelle slide</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">  {{__('Nouvelle slide')}}</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -66,7 +66,7 @@
                                             <div class="card-body">
                                                 <div class="form-group row">
                                                     <div class="col-lg-3">
-                                                        <label class="col-form-label">Nom : </label>
+                                                        <label class="col-form-label">{{__('Nom')}} : </label>
                                                     </div>
                                                     <div class="col-lg-8">
                                                         <input class="form-control" maxlength="25" type="text"
@@ -75,7 +75,7 @@
                                                 </div>
                                                 <div class="form-group row">
                                                     <div class="col-lg-3">
-                                                        <label class="col-form-label">Price : </label>
+                                                        <label class="col-form-label"> {{__('Prix')}} : </label>
                                                     </div>
                                                     <div class="col-lg-8">
                                                         <input class="form-control" maxlength="25" type="number"
@@ -84,7 +84,7 @@
                                                 </div>
                                                 <div class="form-group row">
                                                     <div class="col-lg-3">
-                                                        <label class="col-form-label">Description:</label>
+                                                        <label class="col-form-label"> {{__('Description')}}  :</label>
                                                     </div>
                                                     <div class="col-lg-8">
                                                         <input class="form-control" type="text" name="slider_description"
@@ -93,7 +93,7 @@
                                                 </div>
                                                 <div class="form-group row">
                                                     <div class="col-lg-3">
-                                                        <label class="col-form-label">Image</label>
+                                                        <label class="col-form-label"> {{__('Image')}}</label>
                                                     </div>
                                                     <div class="col-lg-8">
                                                         <input class="form-control" name="slider_image" type="file"
@@ -106,7 +106,7 @@
                                                 </div>
                                                 <div class="col-lg-8">
                                                     <input type="submit" value="Envoyer" class="btn btn-success">
-                                                    <button class="btn btn-danger" data-dismiss="modal"> Annuler</button>
+                                                    <button class="btn btn-danger" data-dismiss="modal">  {{__('Annuler')}}</button>
 
                                                 </div>
                                             </div>
@@ -125,12 +125,12 @@
 
                                     <thead>
                                         <tr>
-                                            <th>Ordre #</th>
-                                            <th>Image</th>
-                                            <th>Nom</th>
-                                            <th>Date de création</th>
-                                            <th>Status</th>
-                                            <th colspan="3" style="text-align:center">action</th>
+                                            <th>{{__('Ordre')}} #</th>
+                                            <th>{{__('Image')}} </th>
+                                            <th> {{__('Nom')}} </th>
+                                            <th> {{__('Date de création')}}</th>
+                                            <th> {{__('Status')}}</th>
+                                            <th colspan="3" style="text-align:center"> {{__('Action')}}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -148,9 +148,9 @@
 
                                                     <td>
                                                         @if ($slider->slider_status == 1)
-                                                            <label class="badge badge-success"> Activé</label>
+                                                            <label class="badge badge-success">  {{__('Activer')}}</label>
                                                         @else
-                                                            <label class="badge badge-danger"> Desactivé</label>
+                                                            <label class="badge badge-danger"> {{__('Désactiver')}} </label>
                                                         @endif
 
                                                     </td>
@@ -168,12 +168,12 @@
                                                         @if ($slider->slider_status == 1)
                                                             <button class="btn btn-outline-warning"
                                                                 onclick="window.location='{{ url('/desactiverslider/' . $slider->id) }}'">
-                                                                désactiver
+                                                                 {{__('Désactiver')}}
                                                             </button>
                                                         @else
                                                             <button class="btn btn-outline-success"
                                                                 onclick="window.location='{{ url('/activerslider/' . $slider->id) }}'">
-                                                                activer
+                                                                 {{__('Activer')}}
                                                             </button>
                                                         @endif
                                                     </td>
@@ -183,7 +183,7 @@
                                             @empty
                                                 <tr>
                                                     <td style="text-align: center;" colspan="6">
-                                                        <p> Aucun Sliders Ajouter</p>
+                                                        <p>  {{__('Aucun Sliders Ajouter')}}</p>
                                                     </td>
                                                 </tr>
                                             @endforelse

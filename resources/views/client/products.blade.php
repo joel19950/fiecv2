@@ -5,7 +5,7 @@
 
     <div class="products">
         <div class="container">
-            <h1>Produits</h1>
+            <h1> {{__('Produits')}}</h1>
             <div class="col-md-9">
                 <div class="content-top1">
                    
@@ -25,7 +25,7 @@
                     </div>
                 </div>
                   @empty
-                      <div style="text-align: center">Aucun produit</div>
+                      <div style="text-align: center">{{__('Aucun produit')}} </div>
                   @endforelse
                    
 
@@ -36,12 +36,12 @@
             <div class="col-md-3 product-bottom">
                 <!--categories-->
                 <div class=" rsidebar span_1_of_left">
-                    <h3 class="cate">Catégories</h3>
+                    <h3 class="cate"> {{__('Catégories')}}</h3>
                     <ul class="menu-drop">
                         @forelse ($categories as $category)
                         <li class="item1"><a href="#">{{$category->category_name}} </a></li>
                         @empty
-                        <li class="item1"><a href="#">Aucun produit </a></li>
+                        <li class="item1"><a href="#">{{__('Aucun produit')}} </a></li>
                         @endforelse
                        
                     
@@ -70,7 +70,7 @@
                 <!--//menu-->
                 <!--seller-->
                 <div class="product-bottom">
-                    <h3 class="cate">Autres produits</h3>
+                    <h3 class="cate"> {{__('Autres produits')}}</h3>
                     @forelse ($products as $product)
                     <div class="product-go">
                         <div class=" fashion-grid">
@@ -84,7 +84,7 @@
                         <div class="clearfix"> </div>
                     </div>  
                     @empty
-                        <div style="text-align: center">Aucun produit </div>
+                        <div style="text-align: center"> {{__('Aucun produit')}} </div>
                     @endforelse
                    
                    

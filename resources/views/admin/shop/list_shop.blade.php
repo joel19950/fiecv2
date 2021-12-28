@@ -23,9 +23,9 @@
                 @endif
                 <div class="card-body">
                     <div class="row">
-                        <h4 class="card-title col-10">Les boutiques</h4>
+                        <h4 class="card-title col-10"> {{__('Les boutiques')}}</h4>
                         <button class="btn btn-outline-primary mb-4" data-toggle="modal" data-target="#exampleModal">
-                            Ajouter
+                            {{__('Ajouter ')}}
                         </button>
                     </div>
 
@@ -34,7 +34,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Nouvelle boutique</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel"> {{__('Nouvelle boutique')}}</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -64,7 +64,7 @@
                                             <div class="card-body">
                                                 <div class="form-group row">
                                                     <div class="col-lg-3">
-                                                        <label class="col-form-label">Nom:</label>
+                                                        <label class="col-form-label">{{__('Nom')}} :</label>
                                                     </div>
                                                     <div class="col-lg-8">
                                                         <input class="form-control" type="text" name="shop_name" required>
@@ -74,7 +74,7 @@
                                             <div class="card-body">
                                                 <div class="form-group row">
                                                     <div class="col-lg-3">
-                                                        <label class="col-form-label">Description:</label>
+                                                        <label class="col-form-label"> {{__('Description')}}:</label>
                                                     </div>
                                                     <div class="col-lg-8">
                                                         <input class="form-control" type="text" name="shop_description"
@@ -85,7 +85,7 @@
                                             <div class="card-body">
                                                 <div class="form-group row">
                                                     <div class="col-lg-3">
-                                                        <label class="col-form-label">Ville:</label>
+                                                        <label class="col-form-label"> {{__('Ville')}}:</label>
                                                     </div>
                                                     <div class="col-lg-8">
                                                         <select name="city_id" id="" class="form-control">
@@ -93,7 +93,7 @@
                                                                 <option value="{{ $city->id }}">{{ $city->city_name }}
                                                                 </option>
                                                             @empty
-                                                                <option>Aucun </option>
+                                                                <option> {{__('Aucun')}}</option>
                                                             @endforelse
                                                         </select>
                                                     </div>
@@ -105,7 +105,7 @@
                                                 </div>
                                                 <div class="col-lg-8">
                                                     <input type="submit" value="Envoyer" class="btn btn-success">
-                                                    <button class="btn btn-danger" data-dismiss="modal"> Annuler</button>
+                                                    <button class="btn btn-danger" data-dismiss="modal">  {{__('Annuler')}}</button>
 
                                                 </div>
                                             </div>
@@ -125,10 +125,10 @@
 
                                     <thead>
                                         <tr>
-                                            <th>Ordre #</th>
+                                            <th>{{__('Ordre')}}  #</th>
 
-                                            <th>Boutique</th>
-                                            <th style="text-align:center">action</th>
+                                            <th> {{__('Boutique')}}</th>
+                                            <th style="text-align:center"> {{__('Action')}}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -145,7 +145,7 @@
                                                     <td>
                                                         <a class="btn btn-outline-danger"
                                                             href="{{ url('/delete_shop/' . $shop->id) }}"
-                                                            id="delete">Delete</a>
+                                                            id="delete"> {{__('Supprimer')}}</a>
                                                     </td>
                                                 </tr>
 
@@ -153,7 +153,7 @@
 
                                             @empty
                                                 <tr>
-                                                    <td colspan="3" style="text-align: center"> Aucun boutique Ajouter </td>
+                                                    <td colspan="3" style="text-align: center">   {{__('Aucun boutique Ajouter')}}</td>
                                                 </tr>
                                             @endforelse
                                         @endif

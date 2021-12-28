@@ -35,8 +35,8 @@
                                 <li><a href="#"><i class="glyphicon glyphicon-star"> </i></a></li>
                             </ul>
                             <div class="review">
-                                <a href="#"> 3 examens </a>/
-                                <a href="#"> Écrire un commentaire</a>
+                                <a href="#">   {{__('3 examens')}}</a>/
+                                <a href="#">  {{__('Écrire un commentaire')}}</a>
                             </div>
                             <div class="clearfix"> </div>
                         </div>
@@ -44,7 +44,7 @@
                         <label class="add-to item_price">{{ $product->product_price }} Fcfa</label>
 
                         <div class="available">
-                            <h6> Disponible </h6>
+                            <h6>  {{__('Disponible')}}</h6>
 
                         </div>
 						
@@ -76,7 +76,7 @@
                             </div>
                         </div>
                     @empty
-                        Aucun autre produit appartient a cette catégories
+                         {{__('Aucun autre produit appartient a cette catégories')}}
                     @endforelse
 
 
@@ -87,12 +87,12 @@
             <div class="col-md-3 product-bottom">
                 <!--categories-->
                 <div class=" rsidebar span_1_of_left">
-                    <h3 class="cate">Catégories</h3>
+                    <h3 class="cate"> {{__('Catégories')}}</h3>
                     <ul class="menu-drop">
                         @forelse ($cates as $cat)
                             <li class="item4"><a href="#">{{ $cat->category_name }}</a></li>
                         @empty
-                            Aucune Catégories lié
+                           {{__('Aucune Catégories lié')}}
                         @endforelse
 
                     </ul>
@@ -120,7 +120,7 @@
                 <!--//menu-->
                 <!--seller-->
                 <div class="product-bottom">
-                    <h3 class="cate">Autre produits</h3>
+                    <h3 class="cate">  {{__('Autre produits')}}</h3>
 
 
                     @forelse ($prods as $prod)
@@ -141,7 +141,7 @@
                             <div class="clearfix"> </div>
                         </div>
                     @empty
-                        <div> Aucun produits</div>
+                        <div>  {{__('Aucun produits')}}</div>
                     @endforelse
 
 

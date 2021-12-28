@@ -50,7 +50,7 @@
     <div class="content">
         <div class="container">
             <div class="content-top">
-                <h1>Produits recents</h1>
+                <h1>{{__('Produits recents')}} </h1>
 
                 <!---728x90--->
                 <div class="content-top1">
@@ -66,7 +66,7 @@
                                 </h3>
                                 <div class="price">
                                     <h5 class="item_price">{{ $product->product_price }} Fcfa</h5>
-                                    <a href="{{ url('/detail_product/' . $product->id) }}" class="item_add">Voir</a>
+                                    <a href="{{ url('/detail_product/' . $product->id) }}" class="item_add"> {{__('Voir')}}</a>
                                     <div class="clearfix"> </div>
                                 </div>
 
@@ -74,7 +74,7 @@
                         </div>
                     @empty
                         <div class="col-md-3 col-md2">
-                            <div style="text-align: center">Aucun produit </div>
+                            <div style="text-align: center"> {{__('Aucun produit')}} </div>
                         </div>
                     @endforelse
                     
