@@ -7,10 +7,11 @@ use Illuminate\Http\Request;
 class ChangeLanguageController extends Controller
 {
     //
-    public function language($locale = null) {
-    if (isset($locale) && in_array($locale, config('app.available_locales'))) {
-            app()->setLocale($locale);
-        }
-    return  view('client.home'); //redirect()->back();
-    }
+public function language($locale) {
+        app()->setLocale($locale);
+        session()->put('locale', $locale);
+        return redirect()->back();
+     //redirect()->back();
+    
+}
 }
