@@ -6,7 +6,7 @@
 
             <div class="contact-grids">
                 <div class="contact-form">
-                    <form>
+                    <form  method="post" action="{{url('/contact')}}" >
                         <div class="contact-bottom">
                             <div class="col-md-4 in-contact">
                                 <span>Nom</span>

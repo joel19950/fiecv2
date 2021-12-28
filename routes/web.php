@@ -8,6 +8,7 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -63,8 +64,8 @@ Route::get('/list_slider',[SliderController::class, 'list_slider']);
 Route::post('/add_slider_save',[SliderController::class, 'add_slider_save']);
 Route::get('/delete_slider/{id}',[SliderController::class, 'delete_slider']);
 
-
-
+//Contact Us
+Route::post('/contact', [ContactController::class, 'contact']);
 
 
 
