@@ -3,29 +3,50 @@
     <div class="contact">
         <div class="container">
             <h1>Contact</h1>
+            @if (Session::has('status'))
+                <div class="alert alert-success">
+                    {{ Session::get('status') }}
+                    <i class="fa fa-check"></i>
+                    {{ Session::put('status', null) }}
+                </div>
+            @endif
+
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
             <div class="contact-grids">
                 <div class="contact-form">
-                    <form  method="post" action="{{url('/contact')}}" >
+                    <form method="post" action="{{ url('/contact')}}">
+                        @csrf
                         <div class="contact-bottom">
                             <div class="col-md-4 in-contact">
                                 <span>Nom</span>
-                                <input type="text">
+                                <input type="text" name="name">
                             </div>
                             <div class="col-md-4 in-contact">
                                 <span>Email</span>
-                                <input type="text">
+                                <input type="text" name="email">
                             </div>
                             <div class="col-md-4 in-contact">
                                 <span>Téléphone</span>
-                                <input type="text">
+                                <input type="text" name="phone">
                             </div>
                             <div class="clearfix"> </div>
                         </div>
-
+                        <div class="contact-bottom-top">
+                            <span>Sujet</span>
+                            <input name="subject" type="text" class="form-control">
+                        </div>
                         <div class="contact-bottom-top">
                             <span>Message</span>
-                            <textarea> </textarea>
+                            <textarea name="message"> </textarea>
                         </div>
                         <input type="submit" value="Envoyer">
                     </form>
@@ -54,7 +75,8 @@
                         <div class="col-md-4 address-grid ">
                             <i class="glyphicon glyphicon-envelope"></i>
                             <div class="address1">
-                                <p><a href="mailto:@example.com"> contact@promo24.com</a></p>
+                                {{--  mailto:@example.com--}}
+                                <p><a href="#"> contact@promo24.com</a></p>
                             </div>
                             <div class="clearfix"> </div>
                         </div>
