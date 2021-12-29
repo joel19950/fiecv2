@@ -68,7 +68,7 @@ Route::get('/delete_slider/{id}',[SliderController::class, 'delete_slider']);
 
 //Contact Us
 Route::post('/contact', [ContactController::class, 'contact']);
-Route::get ( '/{locale?}', [ChangeLanguageController::class, 'language']);
+Route::get ( 'language/{locale}', [ChangeLanguageController::class, 'language']);
 
 
 

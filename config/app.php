@@ -105,9 +105,8 @@ return [
 */
 
 'available_locales' => [
-    'English' => 'en',
-    'Russian' => 'ru',
-    'French' => 'fr',
+    'anglais.jpg' => 'en',
+    'france.png' => 'fr',
   ],
 
     /*

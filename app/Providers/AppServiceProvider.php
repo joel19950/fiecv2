@@ -10,6 +10,7 @@ use App\Models\Catalogue;
 use App\Models\City;
 use App\Models\Slider;
 use Illuminate\Support\Facades\View;
+use App;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -46,5 +47,14 @@ class AppServiceProvider extends ServiceProvider
         View::share('sliders', $sliders);
         View::share('shops', $shops);
         View::share('catalogues', $catalogues);
+
+
+
+        view()->composer('client.layouts.clientlayout', function ($view) {
+            $view->with('current_locale', app()->getLocale());
+         //  $view->with('current_locale', App::setLocale('FR'));
+           $view->with('available_locales', config('app.available_locales'));
+        });
+
     }
 }

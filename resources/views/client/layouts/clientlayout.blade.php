@@ -196,21 +196,31 @@ RIGHT SIDEBAR TOGGLE SECTION
 				</div>
 		
 			
-{{-- 
-				@foreach($available_locales as $locale_name => $available_locale)
-				@if($available_locale === $current_locale)
-					<span class="ml-2 mr-2 text-gray-700">{{ $locale_name }}</span>
-				@else
-					<a class="ml-1 underline ml-2 mr-2" href="language/{{ $available_locale }}">
-						<span>{{ $locale_name }}</span>
-					</a>
-				@endif
-			  @endforeach --}}
-		
+
+{{-- <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
+    @foreach($available_locales as $locale_name => $available_locale)
+        @if($available_locale === $current_locale)
+            <span class="ml-2 mr-2 text-gray-700">{{ $locale_name }}</span>
+        @else
+            <a class="ml-1 underline ml-2 mr-2" href="language/{{ $available_locale }}">
+                <span>{{ $locale_name }}</span>
+            </a>
+        @endif
+    @endforeach
+</div> 
+		 --}}
 				 	
-					 <p class="log"><a href="account.html"> <img src="{{asset('images/france.png')}}" height="12px" width="18px"></a>
-						<span>ou</span><a  href="account.html"> <img src="{{asset('images/anglais.jpg')}}" height="12px" width="18px"> </a></p>
-			
+					 <p class="log">
+					@foreach($available_locales as $locale_name => $available_locale)		 
+					
+					 @if($available_locale === $current_locale)
+					 <a href="language/{{ $current_locale }}"> <img src="{{asset('images/'.$locale_name )}}" height="12px" width="18px"> </a>
+					 @else				
+					{{-- <span>ou</span> --}}
+					<a href="language/{{ $available_locale }}"> <img src="{{asset('images/'.$locale_name)}}" height="12px" width="18px"> </a>
+					@endif
+					@endforeach
+						</p>
 					<div class="clearfix"> </div>
 			</div>
 				<div class="clearfix"> </div>
