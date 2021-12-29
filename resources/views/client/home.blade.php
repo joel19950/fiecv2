@@ -49,8 +49,43 @@
     <!--content-->
     <div class="content">
         <div class="container">
+         
+           
+          
+
             <div class="content-top">
                 <h1>{{__('Produits recents')}} </h1>
+                <div class="content-top1">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <select class="form-control" id="selectedCliente">
+                                        <option>-- Ville -- </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <select class="form-control" id="selectedCliente">
+                                        <option>-- Catégories -- </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <select class="form-control" id="selectedCliente">
+                                        <option>-- Catalogue -- </option>
+                                    </select>
+                                </div>
+                            </div>
+            
+                        </div>
+                    </form>
+                        
+                    
+    
+                </div>
 
                 <!---728x90--->
                 <div class="content-top1">
