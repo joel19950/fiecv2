@@ -26,6 +26,9 @@ class ProductComponent extends Component
             $this->hidden=true;
     }else{
             $this->hidden=false; 
+            $this->city="";
+            $this->category="";
+            $this->catalogue="";
         }
     
         $cities =City::orderBy('id', 'DESC')->get();
