@@ -18,7 +18,7 @@
                     <div class="form-group">
                         <select class="form-control" wire:model="city">
                             
-                                
+                                <option value="">-- Ville --</option>
                            @forelse ($cities as $city)
                            <option value="{{ $city->city_name}}">{{ $city->city_name}} </option>
                            @empty
@@ -33,7 +33,7 @@
                     <div class="form-group">
                         <select class="form-control" wire:model="category">
 
-                            
+                            <option value="">-- Catégorie --</option>
                             @forelse ($categories as $category)
                             <option value="{{ $category->id}}">{{ $category->category_name}} </option>
                             @empty
@@ -47,7 +47,7 @@
                     <div class="form-group">
                         <select class="form-control" wire:model="catalogue">
 
-                           
+                           <option value="">-- Catalogue --</option>
                             @forelse ($catalogues as $catalogue)
                             <option value="{{ $catalogue->id}}">{{ $catalogue->catalogue_name}} </option>
                             @empty
