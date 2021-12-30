@@ -23,7 +23,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="{{asset('js/simpleCart.min.js')}}"> </script>
 <!-- slide -->
 <script src="{{asset('js/responsiveslides.min.js')}}"></script>
-
+<livewire:styles />
    <script>
     $(function () {
       $("#slider").responsiveSlides({
@@ -195,20 +195,6 @@ RIGHT SIDEBAR TOGGLE SECTION
 					<a href="{{URL::to('/')}}"><img src="{{asset('images/logo.jpg')}}" alt="" height="100px" width="75px"></a>	
 				</div>
 		
-			
-
-{{-- <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-    @foreach($available_locales as $locale_name => $available_locale)
-        @if($available_locale === $current_locale)
-            <span class="ml-2 mr-2 text-gray-700">{{ $locale_name }}</span>
-        @else
-            <a class="ml-1 underline ml-2 mr-2" href="language/{{ $available_locale }}">
-                <span>{{ $locale_name }}</span>
-            </a>
-        @endif
-    @endforeach
-</div> 
-		 --}}
 				 	
 					 <p class="log">
 					@foreach($available_locales as $locale_name => $available_locale)		 
@@ -437,7 +423,7 @@ $(window).load(function() {
 
 
 
-
+<livewire:scripts />
 
 
 

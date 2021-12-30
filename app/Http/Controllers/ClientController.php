@@ -6,11 +6,12 @@ use Illuminate\Http\Request;
 
 class ClientController extends Controller
 {
-    //
+     public $hidden = false;
    
      public function home(){
         return view('client.home');
-    }
+        
+        }
      public function aboutus(){
         return view('client.aboutus');
     }
