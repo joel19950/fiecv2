@@ -11,6 +11,7 @@ use App\Models\City;
 use App\Models\Slider;
 use Illuminate\Support\Facades\View;
 use App;
+use URL;
 
 class AppServiceProvider extends ServiceProvider
 {
