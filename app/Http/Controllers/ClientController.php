@@ -9,23 +9,85 @@ class ClientController extends Controller
      public $hidden = false;
    
      public function home(){
-        return view('client.home');
+        $products=Product::where('product_status', 1)->orderBy('id','DESC')->paginate(6);
+        $cities=City::orderBy('id','DESC')->get();
+        $categories=Category::orderBy('id','DESC')->get();
+        $catalogues=Catalogue::orderBy('id','DESC')->get();
+        $sliders=Slider::where('slider_status', 1)->orderBy('id','DESC')->limit(1)->get();
+        $shops=Shop::orderBy('id','DESC')->get();
+    
+
+        return view('client.home')
+        ->with('products',$products)->with('cities',$cities)
+        ->with('categories',$categories)->with('catalogues',$catalogues)
+        ->with('sliders',$sliders)->with('shops',$shops);
         
         }
      public function aboutus(){
-        return view('client.aboutus');
+        $products=Product::where('product_status', 1)->orderBy('id','DESC')->paginate(6);
+        $cities=City::orderBy('id','DESC')->get();
+        $categories=Category::orderBy('id','DESC')->get();
+        $catalogues=Catalogue::orderBy('id','DESC')->get();
+        $sliders=Slider::where('slider_status', 1)->orderBy('id','DESC')->limit(1)->get();
+        $shops=Shop::orderBy('id','DESC')->get();
+
+
+        return view('client.aboutus')
+        ->with('products',$products)->with('cities',$cities)
+        ->with('categories',$categories)->with('catalogues',$catalogues)
+        ->with('sliders',$sliders)->with('shops',$shops);
     }
     public function product_detail(){
-        return view('client.product_detail');
+        $products=Product::where('product_status', 1)->orderBy('id','DESC')->paginate(6);
+        $cities=City::orderBy('id','DESC')->get();
+        $categories=Category::orderBy('id','DESC')->get();
+        $catalogues=Catalogue::orderBy('id','DESC')->get();
+        $sliders=Slider::where('slider_status', 1)->orderBy('id','DESC')->limit(1)->get();
+        $shops=Shop::orderBy('id','DESC')->get();
+
+
+        return view('client.product_detail')
+        ->with('products',$products)->with('cities',$cities)
+        ->with('categories',$categories)->with('catalogues',$catalogues)
+        ->with('sliders',$sliders)->with('shops',$shops);
     }
     public function products(){
-        return view('client.products');
+        $products=Product::where('product_status', 1)->orderBy('id','DESC')->paginate(6);
+        $cities=City::orderBy('id','DESC')->get();
+        $categories=Category::orderBy('id','DESC')->get();
+        $catalogues=Catalogue::orderBy('id','DESC')->get();
+        $sliders=Slider::where('slider_status', 1)->orderBy('id','DESC')->limit(1)->get();
+        $shops=Shop::orderBy('id','DESC')->get();
+
+        return view('client.products')
+        ->with('products',$products)->with('cities',$cities)
+        ->with('categories',$categories)->with('catalogues',$catalogues)
+        ->with('sliders',$sliders)->with('shops',$shops);
     }
 
     public function contact(){
-        return view('client.contact');
+        $products=Product::where('product_status', 1)->orderBy('id','DESC')->paginate(6);
+        $cities=City::orderBy('id','DESC')->get();
+        $categories=Category::orderBy('id','DESC')->get();
+        $catalogues=Catalogue::orderBy('id','DESC')->get();
+        $sliders=Slider::where('slider_status', 1)->orderBy('id','DESC')->limit(1)->get();
+        $shops=Shop::orderBy('id','DESC')->get();
+
+        return view('client.contact')
+        ->with('products',$products)->with('cities',$cities)
+        ->with('categories',$categories)->with('catalogues',$catalogues)
+        ->with('sliders',$sliders)->with('shops',$shops);
     }
     public function search(){
-        return view('client.search');
+        $products=Product::where('product_status', 1)->orderBy('id','DESC')->paginate(6);
+        $cities=City::orderBy('id','DESC')->get();
+        $categories=Category::orderBy('id','DESC')->get();
+        $catalogues=Catalogue::orderBy('id','DESC')->get();
+        $sliders=Slider::where('slider_status', 1)->orderBy('id','DESC')->limit(1)->get();
+        $shops=Shop::orderBy('id','DESC')->get();
+        return view('client.search')
+        ->with('products',$products)->with('cities',$cities)
+        ->with('categories',$categories)->with('catalogues',$catalogues)
+        ->with('sliders',$sliders)->with('shops',$shops);
     }
 }
