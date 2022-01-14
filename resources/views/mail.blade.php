@@ -343,7 +343,7 @@
         <td class="container">
           <div class="content">
 
-            <!-- START CENTERED WHITE CONTAINER -->
+        
             <table role="presentation" class="main">
                  
                <tr>
