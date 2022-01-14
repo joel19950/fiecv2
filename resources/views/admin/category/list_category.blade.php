@@ -67,7 +67,7 @@
                                                         <label class="col-form-label">{{__('Nom')}}:</label>
                                                     </div>
                                                     <div class="col-lg-8">
-                                                        <input class="form-control" maxlength="25" type="text"
+                                                        <input class="form-control"  type="text"
                                                             name="category_name" required>
                                                     </div>
                                                 </div>

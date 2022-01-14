@@ -38,14 +38,8 @@ return view('admin.category.list_category')
 
 public function add_category_save(Request $request){
 //add information database
-$products=Product::where('product_status', 1)->orderBy('id','DESC')->paginate(6);
-$cities=City::orderBy('id','DESC')->get();
 $categories=Category::orderBy('id','DESC')->get();
-$catalogues=Catalogue::orderBy('id','DESC')->get();
-$sliders=Slider::where('slider_status', 1)->orderBy('id','DESC')->limit(1)->get();
-$shops=Shop::orderBy('id','DESC')->get();
-//end information database
-
+//end add information in database
 
 $category=new Category();
 $category->category_name = $request->input('category_name');
@@ -53,9 +47,7 @@ $category->save();
 return redirect('/list_category')->with('status','La  catégorie'.$category->category_name.'     à été ajouté ')
 
 //get information database
-->with('products',$products)->with('cities',$cities)
-->with('categories',$categories)->with('catalogues',$catalogues)
-->with('sliders',$sliders)->with('shops',$shops);
+->with('categories',$categories);
 //end to get information database 
 }
 
