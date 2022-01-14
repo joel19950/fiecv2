@@ -189,7 +189,22 @@ public function desactiverproduct($id)
 
 
 public function add_product(){
-    return view('admin.product.add_product');
+//add information database
+$products=Product::where('product_status', 1)->orderBy('id','DESC')->paginate(6);
+$cities=City::orderBy('id','DESC')->get();
+$categories=Category::orderBy('id','DESC')->get();
+$catalogues=Catalogue::orderBy('id','DESC')->get();
+$sliders=Slider::where('slider_status', 1)->orderBy('id','DESC')->limit(1)->get();
+$shops=Shop::orderBy('id','DESC')->get();
+//end information database
+
+    return view('admin.product.add_product')
+    
+    //get information database
+    ->with('products',$products)->with('cities',$cities)
+    ->with('categories',$categories)->with('catalogues',$catalogues)
+    ->with('sliders',$sliders)->with('shops',$shops);
+    //end to get information database 
 }
 
 public function detail_product($id){
