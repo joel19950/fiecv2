@@ -4,6 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use App\Models\Product;
+use App\Models\Shop;
+use App\Models\Category;
+use App\Models\Catalogue;
+use App\Models\City;
+use App\Models\Slider;
 
 class ContactController extends Controller
 {

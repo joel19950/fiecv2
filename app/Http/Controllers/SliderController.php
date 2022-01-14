@@ -4,15 +4,37 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Slider;
+use App\Models\Product;
+use App\Models\Shop;
+use App\Models\Category;
+use App\Models\Catalogue;
+use App\Models\City;
+
 use Illuminate\Support\Facades\Storage;
 use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 class SliderController extends Controller
 {
-    //
-     //
+    
+
      public function list_slider(){
+
+        //add information database
+$products=Product::where('product_status', 1)->orderBy('id','DESC')->paginate(6);
+$cities=City::orderBy('id','DESC')->get();
+$categories=Category::orderBy('id','DESC')->get();
+$catalogues=Catalogue::orderBy('id','DESC')->get();
+$sliders=Slider::where('slider_status', 1)->orderBy('id','DESC')->limit(1)->get();
+$shops=Shop::orderBy('id','DESC')->get();
+//end information database
+
         $sliders=Slider::orderBy('id','DESC')->paginate(6);
-        return view('admin.slider.list_slider')->with('sliders', $sliders);
+        return view('admin.slider.list_slider')
+        
+        //get information database
+        ->with('products',$products)->with('cities',$cities)
+        ->with('categories',$categories)->with('catalogues',$catalogues)
+        ->with('sliders',$sliders)->with('shops',$shops);
+        //end to get information database 
     }
    
 

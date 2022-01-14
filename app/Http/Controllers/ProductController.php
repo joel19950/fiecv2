@@ -5,13 +5,30 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Brian2694\Toastr\Facades\Toastr;
 use App\Models\Product;
+use App\Models\Shop;
 use App\Models\Category;
+use App\Models\Catalogue;
+use App\Models\City;
+use App\Models\Slider;
 class ProductController extends Controller
 {
     //
 //enregistrer un products dans ma base de donnée
 public function add_product_save(Request $request)
 {
+
+//add information database
+$products=Product::where('product_status', 1)->orderBy('id','DESC')->paginate(6);
+        $cities=City::orderBy('id','DESC')->get();
+        $categories=Category::orderBy('id','DESC')->get();
+        $catalogues=Catalogue::orderBy('id','DESC')->get();
+        $sliders=Slider::where('slider_status', 1)->orderBy('id','DESC')->limit(1)->get();
+        $shops=Shop::orderBy('id','DESC')->get();
+//end information database
+
+
+
+
     $this->validate(
         $request,
         [
@@ -86,8 +103,23 @@ public function delete_product($id)
 
 
 public function list_product(){
-    $products=Product::orderBy('id','DESC')->paginate(6);
-     return view('admin.product.list_product')->with('products',$products);
+//add information database
+$products=Product::where('product_status', 1)->orderBy('id','DESC')->paginate(6);
+$cities=City::orderBy('id','DESC')->get();
+$categories=Category::orderBy('id','DESC')->get();
+$catalogues=Catalogue::orderBy('id','DESC')->get();
+$sliders=Slider::where('slider_status', 1)->orderBy('id','DESC')->limit(1)->get();
+$shops=Shop::orderBy('id','DESC')->get();
+//end information database
+
+
+     return view('admin.product.list_product')
+     
+     //get information database
+     ->with('products',$products)->with('cities',$cities)
+     ->with('categories',$categories)->with('catalogues',$catalogues)
+     ->with('sliders',$sliders)->with('shops',$shops);
+     //end to get information database 
 }
 
 public function desactiverproduct($id)
