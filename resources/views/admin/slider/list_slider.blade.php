@@ -191,8 +191,7 @@
                                     </tbody>
 
                                 </table>
-                                {{ $sliders->links('pagination.paginatelinks')
-                    }}
+                                {{ $sliders->links('pagination.paginatelinks')}}
                             </div>
                         </div>
                     </div>

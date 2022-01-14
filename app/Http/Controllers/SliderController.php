@@ -18,21 +18,11 @@ class SliderController extends Controller
 
      public function list_slider(){
 
-        //add information database
-$products=Product::where('product_status', 1)->orderBy('id','DESC')->paginate(6);
-$cities=City::orderBy('id','DESC')->get();
-$categories=Category::orderBy('id','DESC')->get();
-$catalogues=Catalogue::orderBy('id','DESC')->get();
-$shops=Shop::orderBy('id','DESC')->get();
-//end information database
-
         $sliders=Slider::orderBy('id','DESC')->paginate(6);
         return view('admin.slider.list_slider')
         
         //get information database
-        ->with('products',$products)->with('cities',$cities)
-        ->with('categories',$categories)->with('catalogues',$catalogues)
-        ->with('sliders',$sliders)->with('shops',$shops);
+         ->with('sliders',$sliders);
         //end to get information database 
     }
    
