@@ -33,7 +33,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         
-       $products=Product::where('product_status', 1)->orderBy('id','DESC')->paginate(6);
+        $products=Product::orderBy('id','DESC')->paginate(6);
         $cities=City::orderBy('id','DESC')->get();
         $categories=Category::orderBy('id','DESC')->get();
         $catalogues=Catalogue::orderBy('id','DESC')->get();
