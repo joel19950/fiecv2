@@ -22,7 +22,7 @@ class SliderController extends Controller
         return view('admin.slider.list_slider')
         
         //get information database
-         ->with('sliders',$sliders);
+         ->with('sliders', $sliders);
         //end to get information database 
     }
    
