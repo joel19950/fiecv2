@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // //
+        // 
         
         $products=Product::where('product_status', 1)->orderBy('id','DESC')->paginate(6);
         $cities=City::orderBy('id','DESC')->get();
