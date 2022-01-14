@@ -2,6 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
+use App\Models\Shop;
+use App\Models\Category;
+use App\Models\Catalogue;
+use App\Models\City;
+use App\Models\Slider;
+
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
