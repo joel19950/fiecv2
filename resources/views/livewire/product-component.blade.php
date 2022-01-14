@@ -29,7 +29,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4">     
                     <div class="form-group">
                         <select class="form-control" wire:model="category">
 
