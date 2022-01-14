@@ -31,7 +31,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // 
+
+         if('APP_ENV'!=='local'){   
+                  URL::forceScheme('https');     
+                }
+         
         
       /*  $products=Product::where('product_status', 1)->orderBy('id','DESC')->paginate(6);
         $cities=City::orderBy('id','DESC')->get();
