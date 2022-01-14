@@ -31,8 +31,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
-        /*
+        // //
+        
         $products=Product::where('product_status', 1)->orderBy('id','DESC')->paginate(6);
         $cities=City::orderBy('id','DESC')->get();
         $categories=Category::orderBy('id','DESC')->get();
@@ -46,7 +46,7 @@ class AppServiceProvider extends ServiceProvider
         View::share('products', $products);
         View::share('sliders', $sliders);
         View::share('shops', $shops);
-        View::share('catalogues', $catalogues);*/
+        View::share('catalogues', $catalogues);
 
 
 
